@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { useBootstrapPrefix, SGDSWrapper } from '../ThemeProvider/ThemeProvider';
+import { useBootstrapPrefix, CanvasWrapper } from '../ThemeProvider/ThemeProvider';
 import { BsPrefixProps, BsPrefixRefForwardingComponent } from '../utils/helpers';
 import { Color, Variant } from '../utils/types';
 
@@ -70,7 +70,7 @@ export const Badge: BsPrefixRefForwardingComponent<'span', BadgeProps> =
     ) => {
       const prefix = useBootstrapPrefix(bsPrefix, 'badge');
       return (
-        <SGDSWrapper
+        <CanvasWrapper
         as={Component}
           ref={ref}
           {...props}
@@ -87,7 +87,7 @@ export const Badge: BsPrefixRefForwardingComponent<'span', BadgeProps> =
         >
           {dotIndicator && <span className='visually-hidden'>New alerts</span> }
           {props.children}
-        </SGDSWrapper>
+        </CanvasWrapper>
       );
     },
   );

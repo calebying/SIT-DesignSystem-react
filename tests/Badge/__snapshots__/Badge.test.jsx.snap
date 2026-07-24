@@ -3,7 +3,7 @@
 exports[`Badge should support custom \`as\` 1`] = `
 <DocumentFragment>
   <a
-    class="badge rounded-pill bg-primary sgds"
+    class="badge rounded-pill bg-primary sit-canvas"
     data-testid="test"
     href="#"
   >

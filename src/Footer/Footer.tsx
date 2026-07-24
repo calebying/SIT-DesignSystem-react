@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import {
-  SGDSWrapper,
+  CanvasWrapper,
   useBootstrapPrefix,
 } from '../ThemeProvider/ThemeProvider';
 import {
@@ -26,7 +26,7 @@ export const Footer: BsPrefixRefForwardingComponent<'footer', FooterProps> =
     ({ as: Component = 'footer', bsPrefix, className, ...props }, ref) => {
       bsPrefix = useBootstrapPrefix(bsPrefix, 'footer');
       return (
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           ref={ref}
           className={classNames(className, bsPrefix)}

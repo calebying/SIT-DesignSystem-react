@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import BreadcrumbItem from './BreadcrumbItem';
 import {
@@ -66,7 +66,7 @@ export const Breadcrumb: BsPrefixRefForwardingComponent<
     const prefix = useBootstrapPrefix(bsPrefix, 'breadcrumb');
 
     return (
-      <SGDSWrapper
+      <CanvasWrapper
         as={as}
         aria-label={ariaLabel}
         className={className}
@@ -76,7 +76,7 @@ export const Breadcrumb: BsPrefixRefForwardingComponent<
         <ol {...listProps} className={classNames(prefix, listProps?.className)}>
           {children}
         </ol>
-      </SGDSWrapper>
+      </CanvasWrapper>
     );
   }
 );

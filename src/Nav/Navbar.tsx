@@ -13,7 +13,7 @@ import { NavbarText } from './NavbarText';
 // import NavbarOffcanvas from './NavbarOffcanvas';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import NavbarContext, { NavbarContextType } from './NavbarContext';
 import {
@@ -233,7 +233,7 @@ const Navbar: BsPrefixRefForwardingComponent<'nav', NavbarProps> =
     return (
       <NavbarContext.Provider value={navbarContext}>
         <SelectableContext.Provider value={handleCollapse}>
-          <SGDSWrapper
+          <CanvasWrapper
             as={Component}
             ref={ref}
             {...controlledProps}

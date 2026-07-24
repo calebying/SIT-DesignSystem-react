@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 
 import { map } from '../utils/ElementChildren';
@@ -259,7 +259,7 @@ const ProgressBar = React.forwardRef<HTMLDivElement, ProgressBarProps>(
     } = props;
 
     return (
-      <SGDSWrapper
+      <CanvasWrapper
         ref={ref}
         {...wrapperProps}
         className={classNames(className, bsPrefix)}
@@ -281,7 +281,7 @@ const ProgressBar = React.forwardRef<HTMLDivElement, ProgressBarProps>(
               },
               ref
             )}
-      </SGDSWrapper>
+      </CanvasWrapper>
     );
   }
 );

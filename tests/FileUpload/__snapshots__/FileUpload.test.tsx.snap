@@ -9,14 +9,14 @@ exports[`<FileUpload> Should output a child button element 1`] = `
       type="file"
     />
     <button
-      class="btn btn-primary sgds"
+      class="btn btn-primary sit-canvas"
       type="button"
     >
       FileUpload
     </button>
   </div>
   <ul
-    class="fileupload-list sgds"
+    class="fileupload-list sit-canvas"
   />
 </DocumentFragment>
 `;
@@ -30,14 +30,14 @@ exports[`<FileUpload> Should output a child input element 1`] = `
       type="file"
     />
     <button
-      class="btn btn-primary sgds"
+      class="btn btn-primary sit-canvas"
       type="button"
     >
       FileUpload
     </button>
   </div>
   <ul
-    class="fileupload-list sgds"
+    class="fileupload-list sit-canvas"
   />
 </DocumentFragment>
 `;

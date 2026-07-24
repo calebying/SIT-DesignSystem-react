@@ -16,7 +16,7 @@ import InputGroupContext from '../InputGroup/InputGroupContext';
 import {
   useBootstrapPrefix,
   useIsRTL,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import {
   BsPrefixProps,
@@ -214,7 +214,7 @@ const Dropdown: BsPrefixRefForwardingComponent<'div', DropdownProps> =
           {isInputGroup ? (
             props.children
           ) : (
-            <SGDSWrapper
+            <CanvasWrapper
               as={Component}
               {...props}
               ref={ref}

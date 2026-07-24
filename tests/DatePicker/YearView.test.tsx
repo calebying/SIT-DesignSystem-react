@@ -22,7 +22,7 @@ describe('YearView', () => {
       />
     );
 
-    expect(container.querySelector('.sgds.yearpicker')).toBeInTheDocument();
+    expect(container.querySelector('.sit-canvas.yearpicker')).toBeInTheDocument();
     expect(container.querySelectorAll('button.year').length).toEqual(12);
     expect(
       container.querySelectorAll('button.text-primary.year').length

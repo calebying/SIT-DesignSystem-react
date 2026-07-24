@@ -6,7 +6,7 @@ import { useMemo } from 'react';
 import { InputGroupText } from './InputGroupText';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import InputGroupContext from './InputGroupContext';
 import {
@@ -85,7 +85,7 @@ export const InputGroup: BsPrefixRefForwardingComponent<
     const contextValue = useMemo(() => ({}), []);
     return (
       <InputGroupContext.Provider value={contextValue}>
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           ref={ref}
           {...InputGroupProps}

@@ -10,16 +10,16 @@ describe('<Nav>', () => {
     expect(getByTestId('test').tagName.toLowerCase()).toEqual('ul');
   });
 
-  it('should have .sgds as default component but not when under navbar', () => {
+  it('should have .sit-canvas as default component but not when under navbar', () => {
     const { getByTestId, rerender } = render(<Nav data-testid="test" />);
-    expect(getByTestId('test').classList).toContain('sgds');
+    expect(getByTestId('test').classList).toContain('sit-canvas');
 
     rerender(
       <Navbar>
         <Nav data-testid="test" />
       </Navbar>
     );
-    expect(getByTestId('test').classList).not.toContain('sgds');
+    expect(getByTestId('test').classList).not.toContain('sit-canvas');
     expect(getByTestId('test').classList).toContain('navbar-nav');
   });
 
@@ -65,7 +65,7 @@ describe('<Nav>', () => {
     const navItem = getByTestId('test');
     expect(navItem.classList).not.toContain('navbar-nav-scroll');
   });
-  // OBSOLETE IN SGDS
+  // OBSOLETE IN CANVAS
   // it('should be card header aware', () => {
   //   const { getByTestId } = render(
   //     <CardHeader>

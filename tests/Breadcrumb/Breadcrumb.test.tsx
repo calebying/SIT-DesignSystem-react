@@ -4,9 +4,9 @@ import * as React from 'react';
 import {Breadcrumb} from '../../src';
 
 describe('<Breadcrumb>', () => {
-  it('Should have sgds selector', () => {
+  it('Should have sit-canvas selector', () => {
     const { container } = render(<Breadcrumb />);
-    expect(container.querySelector('nav')?.classList).toContain('sgds')
+    expect(container.querySelector('nav')?.classList).toContain('sit-canvas')
   })
   it('Should apply id to the wrapper ol element', () => {
     const { container } = render(<Breadcrumb id="custom-id" />);

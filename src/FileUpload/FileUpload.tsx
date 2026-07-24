@@ -4,7 +4,7 @@ import { FormGroupProps } from '../Form/FormGroup';
 import { Button, ButtonProps, ButtonSize } from '../Button/Button';
 import { useRef } from 'react';
 import { ButtonVariant } from '../utils/types';
-import { SGDSWrapper } from '../ThemeProvider/ThemeProvider';
+import { CanvasWrapper } from '../ThemeProvider/ThemeProvider';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -175,9 +175,9 @@ export const FileUpload: React.FC<FileUploadProps> = ({
           {children}
         </Button>
       </Form.Group>
-      <SGDSWrapper as="ul" className="fileupload-list">
+      <CanvasWrapper as="ul" className="fileupload-list">
         {listItems}
-      </SGDSWrapper>
+      </CanvasWrapper>
     </>
   );
 };

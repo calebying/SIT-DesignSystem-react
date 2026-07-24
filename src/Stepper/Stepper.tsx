@@ -5,7 +5,7 @@ import {
   WrappedStepsMetadata,
 } from './useStep';
 import { useCallbackRef } from '@restart/hooks';
-import { SGDSWrapper } from '../ThemeProvider/ThemeProvider';
+import { CanvasWrapper } from '../ThemeProvider/ThemeProvider';
 import PropTypes from 'prop-types';
 
 export  interface StepperProps {
@@ -61,10 +61,10 @@ const Stepper: React.FC<StepperProps> = ({ methods }) => {
   };
 
   return (
-    <SGDSWrapper ref={stepperRef} className="stepper">
+    <CanvasWrapper ref={stepperRef} className="stepper">
       {stepsMetadata.data.map((stepMetadata: WrappedStepMetadata) => (
         <div
-          data-testid="sgds-step"
+          data-testid="sit-canvas-step"
           className={`stepper-item ${getClass(stepMetadata)}`}
           onClick={back(stepMetadata)}
           key={stepMetadata.step}
@@ -80,7 +80,7 @@ const Stepper: React.FC<StepperProps> = ({ methods }) => {
           </div>
         </div>
       ))}
-    </SGDSWrapper>
+    </CanvasWrapper>
   );
 };
 

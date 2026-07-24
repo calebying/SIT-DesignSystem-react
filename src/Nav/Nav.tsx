@@ -133,7 +133,7 @@ const Nav: BsPrefixRefForwardingComponent<'ul', NavProps> = React.forwardRef<
           [`${navbarContext?.bsPrefix}-nav`]: navbarContext,
           [`${navbarContext?.bsPrefix}-nav-scroll`]:
             navbarContext && navbarScroll,
-          ['sgds']: !navbarContext,
+          ['sit-canvas']: !navbarContext,
           ['nav-tabs']: !navbarContext,
         })}
         {...props}

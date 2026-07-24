@@ -13,7 +13,7 @@ describe('<Dropdown.Toggle>', () => {
     expect(toggle.classList).toContain('dropdown-toggle');
     expect(toggle.classList).toContain('btn-outline-secondary');
     expect(toggle.classList).toContain('btn');
-    expect(toggle.classList).toContain('sgds');
+    expect(toggle.classList).toContain('sit-canvas');
   });
 
   it('renders children', () => {

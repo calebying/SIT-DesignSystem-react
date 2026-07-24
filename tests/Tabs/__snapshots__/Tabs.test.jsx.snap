@@ -3,7 +3,7 @@
 exports[`<Tabs> Should render TabPane with role="tab" 1`] = `
 <DocumentFragment>
   <ul
-    class="nav sgds nav-tabs"
+    class="nav sit-canvas nav-tabs"
     data-testid="testid"
     role="tablist"
   >
@@ -26,7 +26,7 @@ exports[`<Tabs> Should render TabPane with role="tab" 1`] = `
     </li>
   </ul>
   <div
-    class="sgds tab-content"
+    class="sit-canvas tab-content"
   >
     <div
       aria-labelledby="test-tab-1"

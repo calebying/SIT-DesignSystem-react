@@ -93,7 +93,7 @@ describe('<FileUpload>', () => {
     const $button = $fileUpload?.children[1];
     expect($button?.classList).toContain('btn');
     expect($button?.classList).toContain('btn-primary');
-    expect($button?.classList).toContain('sgds');
+    expect($button?.classList).toContain('sit-canvas');
     expect($button).toHaveAttribute('type', 'button');
   });
 
@@ -270,7 +270,7 @@ describe('<FileUpload>', () => {
         FileUpload
       </FileUpload>
     );
-    expect(container.querySelector("button.sgds")).toHaveClass("test-css-selector")
+    expect(container.querySelector("button.sit-canvas")).toHaveClass("test-css-selector")
   })
 });
 

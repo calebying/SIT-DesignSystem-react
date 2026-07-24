@@ -8,12 +8,12 @@ exports[`<QuantityToggle /> has default structure 1`] = `
     quantity-toggle
   </label>
   <div
-    class="input-group input-group-sm sgds"
+    class="input-group input-group-sm sit-canvas"
     variant="quantity-toggle"
   >
     <button
       aria-label="decrease by 1"
-      class="btn btn-primary sgds"
+      class="btn btn-primary sit-canvas"
       disabled=""
       type="button"
     >
@@ -38,7 +38,7 @@ exports[`<QuantityToggle /> has default structure 1`] = `
     </div>
     <button
       aria-label="increase by 1"
-      class="btn btn-primary sgds"
+      class="btn btn-primary sit-canvas"
       type="button"
     >
       <i

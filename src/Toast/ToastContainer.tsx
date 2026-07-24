@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import {
   BsPrefixProps,
@@ -78,7 +78,7 @@ export const ToastContainer: BsPrefixRefForwardingComponent<
     bsPrefix = useBootstrapPrefix(bsPrefix, 'toast-container');
 
     return (
-      <SGDSWrapper
+      <CanvasWrapper
         ref={ref}
         {...props}
         className={classNames(

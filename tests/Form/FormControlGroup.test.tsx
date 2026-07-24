@@ -8,9 +8,9 @@ describe('<InputGroup>', () => {
 
     expect(getByTestId('test').tagName.toLowerCase()).toEqual('div');
   });
-  it('should have .sgds and .form-control-group selectors by default', () => {
+  it('should have .sit-canvas and .form-control-group selectors by default', () => {
     const { getByTestId } = render(<FormControlGroup data-testid="test" icon={<i className="test"></i>} />);
-    expect(getByTestId('test').classList).toContain('sgds');
+    expect(getByTestId('test').classList).toContain('sit-canvas');
     expect(getByTestId('test').classList).toContain('form-control-group');
 
   })

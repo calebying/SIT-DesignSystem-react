@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { useUncontrolled } from 'uncontrollable';
 import {
-  SGDSWrapper,
+  CanvasWrapper,
   useBootstrapPrefix,
 } from '../ThemeProvider/ThemeProvider';
 import SideNavButton from './SideNavButton';
@@ -93,7 +93,7 @@ const SideNav: BsPrefixRefForwardingComponent<'ul', SideNavProps> =
     );
     return (
       <SideNavContext.Provider value={contextValue}>
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           ref={ref}
           {...controlledProps}

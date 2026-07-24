@@ -22,7 +22,7 @@ describe('MonthView', () => {
       />
     );
 
-    expect(container.querySelector('.sgds.monthpicker')).toBeInTheDocument();
+    expect(container.querySelector('.sit-canvas.monthpicker')).toBeInTheDocument();
     expect(container.querySelectorAll('button.month').length).toEqual(12);
     expect(
       container.querySelectorAll('button.month.text-primary').length

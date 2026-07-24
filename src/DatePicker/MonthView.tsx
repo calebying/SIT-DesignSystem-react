@@ -227,7 +227,7 @@ export const MonthView = React.forwardRef<HTMLDivElement, MonthViewProps>(
       return undefined;
     };
     return (
-      <div className="sgds monthpicker" ref={ref} {...props}>
+      <div className="sit-canvas monthpicker" ref={ref} {...props}>
         {MONTH_LABELS.map((month, index) => {
           const activeMonthClass = getActiveMonthClass(month);
           const isCurrentMonthAndYear =

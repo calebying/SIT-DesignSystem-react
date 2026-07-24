@@ -7,7 +7,7 @@ import {
 } from '@restart/ui/Button';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import {
   BsPrefixProps,
@@ -98,7 +98,7 @@ export const Button: BsPrefixRefForwardingComponent<'button', ButtonProps> =
       const Component = tagName as React.ElementType;
 
       return (
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           {...props}
           {...buttonProps}

@@ -32,7 +32,7 @@ describe('<Dropdown>', () => {
         </Dropdown> 
       );
 
-      expect(container.firstElementChild!.classList).toContain('sgds');
+      expect(container.firstElementChild!.classList).toContain('sit-canvas');
       expect(container.firstElementChild!.classList).toContain('dropdown');
       expect(container.firstElementChild!.classList).toContain(`drop${dir}`);
     });

@@ -191,7 +191,7 @@ export const YearView = React.forwardRef<HTMLDivElement, YearViewProps>(
     };
 
     return (
-      <div className="sgds yearpicker" ref={ref} {...props}>
+      <div className="sit-canvas yearpicker" ref={ref} {...props}>
         {yearArray.map((year, index) => {
           const activeYearClass = getActiveYearClass(year);
           const isCurrentYear =  CURRENT_YEAR === year

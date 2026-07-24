@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-import { useBootstrapPrefix, SGDSWrapper } from '../ThemeProvider/ThemeProvider';
+import { useBootstrapPrefix, CanvasWrapper } from '../ThemeProvider/ThemeProvider';
 import PageItem, { Ellipsis, First, Last, Next, Prev } from './PageItem';
 import { BsPrefixProps } from '../utils/helpers';
 
@@ -40,7 +40,7 @@ const PaginationBase = React.forwardRef<HTMLUListElement, PaginationBaseProps>(
   ({ bsPrefix, className, size, ...props }, ref) => {
     const decoratedBsPrefix = useBootstrapPrefix(bsPrefix, 'pagination');
     return (
-      <SGDSWrapper as='nav' aria-label='Page Navigation'>
+      <CanvasWrapper as='nav' aria-label='Page Navigation'>
         <ul
           ref={ref}
           {...props}
@@ -50,7 +50,7 @@ const PaginationBase = React.forwardRef<HTMLUListElement, PaginationBaseProps>(
             size && `${decoratedBsPrefix}-${size}`
           )}>
         </ul>
-      </SGDSWrapper>
+      </CanvasWrapper>
     );
   }
 );

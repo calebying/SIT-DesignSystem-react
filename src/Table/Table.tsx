@@ -3,7 +3,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 
 import { BsPrefixOnlyProps } from '../utils/helpers';
@@ -128,7 +128,7 @@ export const Table = React.forwardRef<HTMLTableElement, TableProps>(
     );
 
     const table = (
-      <SGDSWrapper as="table" {...props} className={classes} ref={ref} />
+      <CanvasWrapper as="table" {...props} className={classes} ref={ref} />
     )
 
     if (responsive) {

@@ -6,7 +6,7 @@ import {
   BsPrefixRefForwardingComponent,
 } from '../utils/helpers';
 import {
-  SGDSWrapper,
+  CanvasWrapper,
   useBootstrapPrefix,
 } from '../ThemeProvider/ThemeProvider';
 import classNames from 'classnames';
@@ -41,7 +41,7 @@ export const FormControlGroup: BsPrefixRefForwardingComponent<
   ) => {
     bsPrefix = useBootstrapPrefix(bsPrefix, 'form-control-group');
     return (
-      <SGDSWrapper
+      <CanvasWrapper
         className={classNames(bsPrefix, className)}
         {...props}
         ref={ref}
@@ -51,7 +51,7 @@ export const FormControlGroup: BsPrefixRefForwardingComponent<
             className: classNames(icon.props.className, 'form-control-icon'),
           })}
         {children}
-      </SGDSWrapper>
+      </CanvasWrapper>
     );
   }
 );

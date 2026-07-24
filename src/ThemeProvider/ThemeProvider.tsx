@@ -40,8 +40,6 @@ export function useBootstrapPrefix(
   return prefix || prefixes[defaultPrefix] || `${defaultPrefix}`;
 }
 
-// `sgds-${defaultPrefix}`
-
 export function useIsRTL() {
   const { dir } = useContext(ThemeContext);
   return dir === 'rtl';
@@ -63,14 +61,14 @@ function createBootstrapComponent(Component, opts) {
   return Wrapped;
 }
 
-interface SGDSComponentProps extends HTMLAttributes<HTMLElement> {
+interface CanvasComponentProps extends HTMLAttributes<HTMLElement> {
   as?: ElementType;
   variant?: string;
 }
 
-const SGDSWrapper =  React.forwardRef<HTMLElement,SGDSComponentProps>(({ as: Tag = 'div', ...props}, ref) => {
-  return <Tag ref={ref} {...props} className={classNames(props.className, 'sgds')}  />;
+const CanvasWrapper =  React.forwardRef<HTMLElement,CanvasComponentProps>(({ as: Tag = 'div', ...props}, ref) => {
+  return <Tag ref={ref} {...props} className={classNames(props.className, 'sit-canvas')}  />;
 });
 
-export { createBootstrapComponent, Consumer as ThemeConsumer, SGDSWrapper };
+export { createBootstrapComponent, Consumer as ThemeConsumer, CanvasWrapper };
 export default ThemeProvider;

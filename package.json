@@ -1,9 +1,9 @@
 {
-  "name": "@govtechsg/sgds-react",
-  "description": "Design System unites Singapore Government digital services around a common visual language and user experience",
-  "author": "GovTechSG",
-  "homepage": "https://github.com/GovTechSG/sgds-govtech-react/",
-  "bugs": "https://github.com/GovTechSG/sgds-govtech-react/issues",
+  "name": "@sit-canvas/canvas-react",
+  "description": "Canvas React — Singapore Institute of Technology's design system components for React, adapted from GovTechSG/sgds-govtech-react.",
+  "author": "Singapore Institute of Technology",
+  "homepage": "https://github.com/calebying/SIT-DesignSystem-react/",
+  "bugs": "https://github.com/calebying/SIT-DesignSystem-react/issues",
   "contributors": [
     {
       "name": "clukhei",
@@ -30,9 +30,9 @@
     "test": "jest --passWithNoTests",
     "ci:test": "jest --detectOpenHandles",
     "e2e-test": "node cypress/scripts/run_all.js & cypress open",
-    "storybook": "STORYBOOK_STYLE_URL=https://v2dev.designsystem.tech.gov.sg/css/sgds.css start-storybook -p 6006 --no-manager-cache",
-    "dev:build-storybook": "STORYBOOK_STYLE_URL=https://v2dev.designsystem.tech.gov.sg/css/sgds.css build-storybook",
-    "prod:build-storybook": "STORYBOOK_STYLE_URL=https://cdn.jsdelivr.net/npm/@govtechsg/sgds@2.3.2/css/sgds.css build-storybook",
+    "storybook": "STORYBOOK_STYLE_URL=https://cdn.jsdelivr.net/npm/@govtechsg/sgds@2.3.6/css/sgds.css start-storybook -p 6006 --no-manager-cache",
+    "dev:build-storybook": "STORYBOOK_STYLE_URL=https://cdn.jsdelivr.net/npm/@govtechsg/sgds@2.3.6/css/sgds.css build-storybook",
+    "prod:build-storybook": "STORYBOOK_STYLE_URL=https://cdn.jsdelivr.net/npm/@govtechsg/sgds@2.3.6/css/sgds.css build-storybook",
     "prepare": "husky install",
     "changelog": "cz changelog --incremental"
   },
@@ -50,8 +50,8 @@
     "@babel/core": "^7.16.5",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@govtechsg/sgds": "latest",
-    "@govtechsg/sgds-web-component": "^1.2.2",
+    "@govtechsg/sgds": "2.3.6",
+    "@govtechsg/sgds-web-component": "1.4.0",
     "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-replace": "^4.0.0",

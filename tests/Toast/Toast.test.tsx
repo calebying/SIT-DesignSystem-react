@@ -32,16 +32,16 @@ describe('<Toast>', () => {
     expect(container.firstElementChild!.classList).toContain('toast')
   });
 
-  it('should have .sgds class by default ', () => {
+  it('should have .sit-canvas class by default ', () => {
     const { container } = render(<Toast>Card</Toast>);
-    expect(container.firstElementChild!.classList).toContain('sgds')
+    expect(container.firstElementChild!.classList).toContain('sit-canvas')
   })
 
-  it('isSGDS prop false should remove .sgds selector', () => {
+  it('isCanvas prop false should remove .sit-canvas selector', () => {
     const { container, rerender } = render(<Toast>Card</Toast>);
-    expect(container.firstElementChild!.classList).toContain('sgds')
-    rerender(<Toast isSGDS={false}>Card</Toast>)
-    expect(container.firstElementChild!.classList).not.toContain('sgds')
+    expect(container.firstElementChild!.classList).toContain('sit-canvas')
+    rerender(<Toast isCanvas={false}>Card</Toast>)
+    expect(container.firstElementChild!.classList).not.toContain('sit-canvas')
 
   })
   it('when status defined, should reflect in class', () => {

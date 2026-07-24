@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { useBootstrapPrefix, useIsRTL, SGDSWrapper } from '../ThemeProvider/ThemeProvider';
+import { useBootstrapPrefix, useIsRTL, CanvasWrapper } from '../ThemeProvider/ThemeProvider';
 import { Placement } from '../utils/types';
 import { BsPrefixProps, getOverlayDirection } from '../utils/helpers';
 import PropTypes from 'prop-types';
@@ -81,7 +81,7 @@ const TooltipBox = React.forwardRef<HTMLDivElement, TooltipBoxProps>(
     const bsDirection = getOverlayDirection(primaryPlacement, isRTL);
 
     return (
-      <SGDSWrapper
+      <CanvasWrapper
         ref={ref}
         style={style}
         role="tooltip"
@@ -92,7 +92,7 @@ const TooltipBox = React.forwardRef<HTMLDivElement, TooltipBoxProps>(
         <div className={`${bsPrefix}-inner`}>
           {children}
         </div>
-      </SGDSWrapper>
+      </CanvasWrapper>
     );
   }
 );

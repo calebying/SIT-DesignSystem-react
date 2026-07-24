@@ -7,7 +7,7 @@ describe('<Footer/>', () => {
     const { container } = render(<Footer />);
     expect(container.firstElementChild?.tagName).toBe('FOOTER');
     expect(container.firstElementChild?.classList).toContain('footer');
-    expect(container.firstElementChild?.classList).toContain('sgds');
+    expect(container.firstElementChild?.classList).toContain('sit-canvas');
   });
   it('bsPrefix footer gets override', () => {
     const {container} = render(<Footer bsPrefix="test"/>)

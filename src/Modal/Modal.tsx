@@ -32,7 +32,7 @@ import {
 import {
   useBootstrapPrefix,
   useIsRTL,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 
 export interface ModalProps
@@ -488,7 +488,7 @@ const Modal: BsPrefixRefForwardingComponent<'div', ModalProps> =
         baseModalStyle.display = 'block';
       }
       const renderDialog = (dialogProps: ModalDialogProps) => (
-        <SGDSWrapper
+        <CanvasWrapper
           role="dialog"
           {...dialogProps}
           style={baseModalStyle}
@@ -512,7 +512,7 @@ const Modal: BsPrefixRefForwardingComponent<'div', ModalProps> =
           >
             {children}
           </Dialog>
-        </SGDSWrapper>
+        </CanvasWrapper>
       );
 
       return (

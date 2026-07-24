@@ -43,7 +43,7 @@ describe('DatePicker', () => {
     fireEvent.click(container.querySelector('button.dropdown-toggle')!);
     await waitFor(() => {
       expect(
-        container.querySelector('.dropdown-menu.datepicker.sgds.show')
+        container.querySelector('.dropdown-menu.datepicker.sit-canvas.show')
       ).toBeInTheDocument();
       const today = new Date();
       expect(
@@ -2312,7 +2312,7 @@ describe('Datepicker reset button', () => {
     fireEvent.click(calendarBtn);
     await waitFor(() => {
       expect(
-        container.querySelector('.dropdown-menu.datepicker.sgds.show')
+        container.querySelector('.dropdown-menu.datepicker.sit-canvas.show')
       ).toBeInTheDocument();
     });
     //navigate to month view

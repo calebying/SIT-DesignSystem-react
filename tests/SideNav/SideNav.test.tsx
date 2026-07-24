@@ -7,7 +7,7 @@ describe('<SideNav>', () => {
   it('should output default structure', () => {
     const { getByText } = render(<SideNav>SideNav</SideNav>);
     expect(getByText('SideNav').tagName).toEqual('UL');
-    expect(getByText('SideNav').classList).toContain('sgds');
+    expect(getByText('SideNav').classList).toContain('sit-canvas');
     expect(getByText('SideNav').classList).toContain('sidenav');
     expect(getByText('SideNav').classList).toContain('list-unstyled');
   });
@@ -16,9 +16,9 @@ describe('<SideNav>', () => {
     const { getByText } = render(<SideNav as="div">SideNav</SideNav>);
     expect(getByText('SideNav').tagName).toEqual('DIV');
   });
-  it('sticky prop should be forwarded to .sgds.sidenav', () => {
+  it('sticky prop should be forwarded to .sit-canvas.sidenav', () => {
     const { container } = render(<SideNav sticky>SideNav</SideNav>);
-    expect(container.querySelector('.sgds.sidenav')?.classList).toContain(
+    expect(container.querySelector('.sit-canvas.sidenav')?.classList).toContain(
       'sticky'
     );
   });

@@ -44,8 +44,8 @@ export interface ToastProps
    *
    */
   bg?: Variant;
-  /** When set true, applies SGDS stylings */
-  isSGDS?: boolean;
+  /** When set true, applies Canvas stylings */
+  isCanvas?: boolean;
   /**Adds CSS styling to `<Toast />` based on the defined status */
   status?: 'success' | 'warning' | 'danger';
 }
@@ -92,7 +92,7 @@ const propTypes = {
    * @type {('primary'|'secondary'|'success'|'danger'|'warning'|'info'|'dark'|'light')}
    */
   bg: PropTypes.string,
-  isSGDS: PropTypes.bool,
+  isCanvas: PropTypes.bool,
   status: PropTypes.oneOf(['success', 'warning', 'danger']),
 };
 
@@ -109,7 +109,7 @@ const Toast: BsPrefixRefForwardingComponent<'div', ToastProps> =
         autohide = false,
         onClose,
         bg,
-        isSGDS = true,
+        isCanvas = true,
         status,
         ...props
       },
@@ -159,7 +159,7 @@ const Toast: BsPrefixRefForwardingComponent<'div', ToastProps> =
             className,
             bg && `bg-${bg}`,
             !hasAnimation && (show ? 'show' : 'hide'),
-            isSGDS && 'sgds',
+            isCanvas && 'sit-canvas',
             status && `is-${status}`
           )}
           role="alert"

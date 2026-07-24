@@ -7,8 +7,8 @@ describe('Table', () => {
     const { getByTestId, container } = render(<Table data-testid="table-test" />);
     expect(getByTestId('table-test').tagName).toEqual('TABLE');
     expect(getByTestId('table-test').classList).toContain('table');
-    expect(getByTestId('table-test').classList).toContain('sgds');
-    expect(container.querySelector('div.table-responsive>.table.sgds')).not.toBeInTheDocument()
+    expect(getByTestId('table-test').classList).toContain('sit-canvas');
+    expect(container.querySelector('div.table-responsive>.table.sit-canvas')).not.toBeInTheDocument()
   });
 
   it('Should have correct class when striped', () => {
@@ -43,13 +43,13 @@ describe('Table', () => {
 
   it('Should have responsive wrapper with tabindex', () => {
     const { container } = render(<Table responsive data-testid="table-test" />);
-    expect(container.querySelector('div.table-responsive>.table.sgds')).toBeInTheDocument()
+    expect(container.querySelector('div.table-responsive>.table.sit-canvas')).toBeInTheDocument()
     expect(container.querySelector('div.table-responsive')).toHaveAttribute("tabindex", "0")
   });
 
   it('Should have responsive breakpoints', () => {
     const { container } = render(<Table responsive="sm" data-testid="table-test" />);
-    expect(container.querySelector('div.table-responsive-sm>.table.sgds')).toBeInTheDocument();
+    expect(container.querySelector('div.table-responsive-sm>.table.sit-canvas')).toBeInTheDocument();
   });
 });
 

@@ -8,7 +8,7 @@ describe('<ActionCard>', () => {
     expect(getByText('Test').tagName).toEqual('DIV');
     expect(getByText('Test').parentElement?.tagName).toEqual('DIV');
     expect(getByText('Test').parentElement?.classList).toContain('card');
-    expect(getByText('Test').parentElement?.classList).toContain('sgds');
+    expect(getByText('Test').parentElement?.classList).toContain('sit-canvas');
     expect(getByText('Test').parentElement).toHaveAttribute(
       'variant',
       'card-action'
@@ -49,8 +49,8 @@ describe('<ActionCard>', () => {
   });
   it('when card is not checked, is-active classname should not be present', () => {
     const { container, rerender } = render(<SelectableCard checked={false}>Test</SelectableCard>);
-    expect(container.querySelector('.sgds.card')?.classList).not.toContain('is-active')
+    expect(container.querySelector('.sit-canvas.card')?.classList).not.toContain('is-active')
     rerender(<SelectableCard checked={true}>Test</SelectableCard>)
-    expect(container.querySelector('.sgds.card')?.classList).toContain('is-active')
+    expect(container.querySelector('.sit-canvas.card')?.classList).toContain('is-active')
   })
 });

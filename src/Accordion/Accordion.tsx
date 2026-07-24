@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { useUncontrolled } from 'uncontrollable';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import AccordionBody from './AccordionBody';
 import AccordionButton from './AccordionButton';
@@ -81,7 +81,7 @@ const Accordion: BsPrefixRefForwardingComponent<'div', AccordionProps> =
 
     return (
       <AccordionContext.Provider value={contextValue}>
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           ref={ref}
           {...controlledProps}

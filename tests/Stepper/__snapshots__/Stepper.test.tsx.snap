@@ -3,13 +3,13 @@
 exports[`Stepper Stepper interactions with onClick methods 1`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -31,7 +31,7 @@ exports[`Stepper Stepper interactions with onClick methods 1`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -53,7 +53,7 @@ exports[`Stepper Stepper interactions with onClick methods 1`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -82,19 +82,19 @@ exports[`Stepper Stepper interactions with onClick methods 1`] = `
     currentStep: 1 
   </p>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -105,13 +105,13 @@ exports[`Stepper Stepper interactions with onClick methods 1`] = `
 exports[`Stepper Stepper interactions with onClick methods 2`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="false"
       aria-disabled="false"
       class="stepper-item is-completed is-clickable"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -133,7 +133,7 @@ exports[`Stepper Stepper interactions with onClick methods 2`] = `
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -155,7 +155,7 @@ exports[`Stepper Stepper interactions with onClick methods 2`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -184,25 +184,25 @@ exports[`Stepper Stepper interactions with onClick methods 2`] = `
     currentStep: 2 
   </p>
   <button
-    class="btn btn-danger sgds"
+    class="btn btn-danger sit-canvas"
     type="button"
   >
     Back
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -213,13 +213,13 @@ exports[`Stepper Stepper interactions with onClick methods 2`] = `
 exports[`Stepper Stepper interactions with onClick methods 3`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="false"
       aria-disabled="false"
       class="stepper-item is-completed is-clickable"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -241,7 +241,7 @@ exports[`Stepper Stepper interactions with onClick methods 3`] = `
       aria-current="false"
       aria-disabled="false"
       class="stepper-item is-completed is-clickable"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -263,7 +263,7 @@ exports[`Stepper Stepper interactions with onClick methods 3`] = `
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -284,7 +284,7 @@ exports[`Stepper Stepper interactions with onClick methods 3`] = `
   </div>
   <div>
     <div
-      class="fade alert alert-primary show sgds"
+      class="fade alert alert-primary show sit-canvas"
       role="alert"
     >
       At Step 3
@@ -297,25 +297,25 @@ exports[`Stepper Stepper interactions with onClick methods 3`] = `
     currentStep: 3 
   </p>
   <button
-    class="btn btn-danger sgds"
+    class="btn btn-danger sit-canvas"
     type="button"
   >
     Back
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Submit
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -326,13 +326,13 @@ exports[`Stepper Stepper interactions with onClick methods 3`] = `
 exports[`Stepper Stepper interactions with onClick methods 4`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="false"
       aria-disabled="false"
       class="stepper-item is-completed is-clickable"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -354,7 +354,7 @@ exports[`Stepper Stepper interactions with onClick methods 4`] = `
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -376,7 +376,7 @@ exports[`Stepper Stepper interactions with onClick methods 4`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -405,25 +405,25 @@ exports[`Stepper Stepper interactions with onClick methods 4`] = `
     currentStep: 2 
   </p>
   <button
-    class="btn btn-danger sgds"
+    class="btn btn-danger sit-canvas"
     type="button"
   >
     Back
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -434,13 +434,13 @@ exports[`Stepper Stepper interactions with onClick methods 4`] = `
 exports[`Stepper Stepper interactions with onClick methods 5`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -462,7 +462,7 @@ exports[`Stepper Stepper interactions with onClick methods 5`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -484,7 +484,7 @@ exports[`Stepper Stepper interactions with onClick methods 5`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -513,19 +513,19 @@ exports[`Stepper Stepper interactions with onClick methods 5`] = `
     currentStep: 1 
   </p>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -536,13 +536,13 @@ exports[`Stepper Stepper interactions with onClick methods 5`] = `
 exports[`Stepper Stepper interactions with onClick methods 6`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -564,7 +564,7 @@ exports[`Stepper Stepper interactions with onClick methods 6`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -586,7 +586,7 @@ exports[`Stepper Stepper interactions with onClick methods 6`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -615,19 +615,19 @@ exports[`Stepper Stepper interactions with onClick methods 6`] = `
     currentStep: 1 
   </p>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -638,13 +638,13 @@ exports[`Stepper Stepper interactions with onClick methods 6`] = `
 exports[`Stepper Stepper interactions with onClick methods 7`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -666,7 +666,7 @@ exports[`Stepper Stepper interactions with onClick methods 7`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -688,7 +688,7 @@ exports[`Stepper Stepper interactions with onClick methods 7`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -717,19 +717,19 @@ exports[`Stepper Stepper interactions with onClick methods 7`] = `
     currentStep: 1 
   </p>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -740,13 +740,13 @@ exports[`Stepper Stepper interactions with onClick methods 7`] = `
 exports[`Stepper Stepper interactions with onClick methods 8`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="false"
       aria-disabled="false"
       class="stepper-item is-completed is-clickable"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -768,7 +768,7 @@ exports[`Stepper Stepper interactions with onClick methods 8`] = `
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -790,7 +790,7 @@ exports[`Stepper Stepper interactions with onClick methods 8`] = `
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -819,25 +819,25 @@ exports[`Stepper Stepper interactions with onClick methods 8`] = `
     currentStep: 2 
   </p>
   <button
-    class="btn btn-danger sgds"
+    class="btn btn-danger sit-canvas"
     type="button"
   >
     Back
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
      Next
   </button>
   <button
-    class="btn btn-primary sgds"
+    class="btn btn-primary sit-canvas"
     type="button"
   >
     Reset
   </button>
   <button
-    class="btn btn-warning sgds"
+    class="btn btn-warning sit-canvas"
     type="button"
   >
     Jump to last page
@@ -848,13 +848,13 @@ exports[`Stepper Stepper interactions with onClick methods 8`] = `
 exports[`Stepper default html structure, with minimal required stepMethods 1`] = `
 <DocumentFragment>
   <div
-    class="stepper sgds"
+    class="stepper sit-canvas"
   >
     <div
       aria-current="step"
       aria-disabled="true"
       class="stepper-item is-active"
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -876,7 +876,7 @@ exports[`Stepper default html structure, with minimal required stepMethods 1`] =
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div
@@ -898,7 +898,7 @@ exports[`Stepper default html structure, with minimal required stepMethods 1`] =
       aria-current="false"
       aria-disabled="true"
       class="stepper-item "
-      data-testid="sgds-step"
+      data-testid="sit-canvas-step"
       tabindex="0"
     >
       <div

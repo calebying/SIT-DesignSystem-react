@@ -850,7 +850,7 @@ export const DatePicker: BsPrefixRefForwardingComponent<
       month: 'Choose month',
       year: 'Choose year',
     };
-    const feedbackId = 'id-6163-sgds-feedback-div';
+    const feedbackId = 'id-6163-sit-canvas-feedback-div';
     return (
       <DatePickerContext.Provider value={contextValue}>
         <Dropdown
@@ -900,7 +900,7 @@ export const DatePicker: BsPrefixRefForwardingComponent<
           </FormControl.Feedback>
           <Dropdown.Menu
             id={datepickerMenuId}
-            className="sgds datepicker"
+            className="sit-canvas datepicker"
             as="div"
             role="dialog"
             aria-modal="true"

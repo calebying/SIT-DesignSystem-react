@@ -3,9 +3,9 @@ import {Card} from '../../src';;
 import { render } from '@testing-library/react';
 
 describe('<Card>', () => {
-    it('should have sgds prefix on wrapper', () => {
+    it('should have sit-canvas prefix on wrapper', () => {
     const  { getByText } = render(<Card>Card</Card>);
-    expect(getByText('Card').classList).toContain('sgds');
+    expect(getByText('Card').classList).toContain('sit-canvas');
   });
   it('should output a div', () => {
     const { getByText } = render(<Card>Card</Card>);

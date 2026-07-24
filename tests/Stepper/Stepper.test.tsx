@@ -127,7 +127,7 @@ describe('Stepper', () => {
     //outer div
     expect(container.tagName).toEqual('DIV');
     const $outerDiv = container.querySelectorAll('div')[0];
-    expect($outerDiv.classList).toContain('sgds');
+    expect($outerDiv.classList).toContain('sit-canvas');
     expect($outerDiv.classList).toContain('stepper');
 
     //3 child divs
@@ -265,7 +265,7 @@ describe('Stepper', () => {
     });
 
     //click stepper to go to step 1
-    const $stepMarkerOne = getAllByTestId('sgds-step')[0];
+    const $stepMarkerOne = getAllByTestId('sit-canvas-step')[0];
     fireEvent.click($stepMarkerOne);
 
     await waitFor(() => {
@@ -284,8 +284,8 @@ describe('Stepper', () => {
 
     // At stepper 1 , cannot click stepMarker 2 or 3 to move forward
 
-    const $stepMarkerTwo = getAllByTestId('sgds-step')[1];
-    const $stepMarkerThree = getAllByTestId('sgds-step')[2];
+    const $stepMarkerTwo = getAllByTestId('sit-canvas-step')[1];
+    const $stepMarkerThree = getAllByTestId('sit-canvas-step')[2];
 
     fireEvent.click($stepMarkerTwo);
     await waitFor(() => {

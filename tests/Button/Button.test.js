@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 import {Button} from '../../src/Button';
-import { SGDSWrapper } from '../../src/ThemeProvider/ThemeProvider';
+import { CanvasWrapper } from '../../src/ThemeProvider/ThemeProvider';
 
 describe('<Button>', () => {
-  it('should have sgds prefix on wrapper', () => {
+  it('should have sit-canvas prefix on wrapper', () => {
     const wrapper = mount(<Button>Title</Button>);
-    expect(wrapper.find(SGDSWrapper).exists()).toBe(true);
-    expect(wrapper.find('.btn').at(1).hasClass('sgds')).toBe(true);
+    expect(wrapper.find(CanvasWrapper).exists()).toBe(true);
+    expect(wrapper.find('.btn').at(1).hasClass('sit-canvas')).toBe(true);
   });
   it('Should output a button', () => {
     const $button = mount(<Button>Title</Button>).find('button');

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import ThemeProvider, { createBootstrapComponent, SGDSWrapper } from '../../src/ThemeProvider/ThemeProvider';
+import ThemeProvider, { createBootstrapComponent, CanvasWrapper } from '../../src/ThemeProvider/ThemeProvider';
 import  { Button } from '../../src/Button';
 
 describe('<ThemeProvider>', () => {
@@ -60,25 +60,25 @@ describe('<ThemeProvider>', () => {
   });
 });
 
-describe('SGDSWrapper', ()=> {
-  it('returns default div wrapper with sgds className', () => {
-    const wrapper = mount(<SGDSWrapper></SGDSWrapper>)
-    expect(wrapper.hasClass('sgds'))
+describe('CanvasWrapper', ()=> {
+  it('returns default div wrapper with sit-canvas className', () => {
+    const wrapper = mount(<CanvasWrapper></CanvasWrapper>)
+    expect(wrapper.hasClass('sit-canvas'))
     expect(wrapper.find('div').exists()).toBe(true)
 
   })
 
   it('returns a element when passed as prop', ()=> {
-    const wrapper=  mount(<SGDSWrapper as="a"></SGDSWrapper>)
+    const wrapper=  mount(<CanvasWrapper as="a"></CanvasWrapper>)
     expect(wrapper.find('div').exists()).toBe(false)
     expect(wrapper.find('a').exists()).toBe(true)
   })
 
   it('should forward refs to the component', () => {
     const ref = React.createRef();
-    mount(<SGDSWrapper ref={ref} as="button"></SGDSWrapper>)
+    mount(<CanvasWrapper ref={ref} as="button"></CanvasWrapper>)
     expect(ref.current.tagName).toEqual('BUTTON')
-    mount(<SGDSWrapper ref={ref} as="span"></SGDSWrapper>)
+    mount(<CanvasWrapper ref={ref} as="span"></CanvasWrapper>)
     expect(ref.current.tagName).toEqual('SPAN')
   })
 })

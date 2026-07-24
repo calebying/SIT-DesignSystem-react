@@ -7,7 +7,7 @@ import { useUncontrolled } from 'uncontrollable';
 import useEventCallback from '@restart/hooks/useEventCallback';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import Fade from '../Fade/Fade';
 import CloseButton from '../CloseButton/CloseButton';
@@ -122,7 +122,7 @@ export const Alert: BsPrefixRefForwardingComponent<'div', AlertProps> =
       });
       const Transition = transition === true ? Fade : transition;
       const alert = (
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           role="alert"
           {...(!Transition ? props : undefined)}
@@ -142,7 +142,7 @@ export const Alert: BsPrefixRefForwardingComponent<'div', AlertProps> =
               className={`btn-sm`}
             />
           )}
-        </SGDSWrapper>
+        </CanvasWrapper>
       );
 
       if (!Transition) return show ? alert : null;

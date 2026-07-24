@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 import {
   useBootstrapPrefix,
-  SGDSWrapper,
+  CanvasWrapper,
 } from '../ThemeProvider/ThemeProvider';
 import CardImg from './CardImg';
 import CardHeader from './CardHeader';
@@ -89,7 +89,7 @@ export const Card: BsPrefixRefForwardingComponent<'div', CardProps> =
       const prefix = useBootstrapPrefix(bsPrefix, 'card');
 
       return (
-        <SGDSWrapper
+        <CanvasWrapper
           as={Component}
           ref={ref}
           {...props}
@@ -102,7 +102,7 @@ export const Card: BsPrefixRefForwardingComponent<'div', CardProps> =
           )}
         >
           {children}
-        </SGDSWrapper>
+        </CanvasWrapper>
       );
     }
   );
