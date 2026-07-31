@@ -8,7 +8,7 @@ import {
   FooterBottom,
   FooterBottomLinks,
   FooterBottomCopyrights
-} from '@govtechsg/sgds-react';
+} from '@sit-canvas/canvas-react';
 
 const FooterCom = () => {
   return (

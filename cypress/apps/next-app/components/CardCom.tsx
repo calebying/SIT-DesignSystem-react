@@ -1,4 +1,4 @@
-import { Card, CardImg, CardTitle, CardBody, CardLink, CardText } from "@govtechsg/sgds-react"
+import { Card, CardImg, CardTitle, CardBody, CardLink, CardText } from "@sit-canvas/canvas-react"
 
 const CardCom = () => {
   return <>

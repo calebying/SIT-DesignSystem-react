@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, AccordionHeader, AccordionBody } from '@govtechsg/sgds-react'
+import { Accordion, AccordionItem, AccordionHeader, AccordionBody } from '@sit-canvas/canvas-react'
 const AccordionCom = () => (
   <Accordion defaultActiveKey="0">
     <AccordionItem eventKey="0">

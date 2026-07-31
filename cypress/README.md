@@ -22,8 +22,8 @@ To start testing a particular app, do the following:
 1. `npm install` the app in `cypress/apps` folder.
 1. In the root directory, ensure that the `dist` folder containing build files is present. Otherwise, run `npm run build` in the root directory.
 1. Install the following modules in the app folder:
-    - `npm install @govtechsg/sgds`
-    - `npm install file:../../../dist` to install the local sgds-react library
+    - `npm install @sit-canvas/canvas-css`
+    - `npm install file:../../../dist` to install the local canvas-react library
 1. Create a `scripts/run_*.sh` file for the app. You can refer to the other `run_*.sh` files for more details on create the script to run your app. **Important: Ensure that the port your app is running on is not being used by other apps.**
 1. Update `scripts/run_all.js` to add the script for running your app.
 1. Add `e2e/<your-app-name>.spec.cy.ts` to add test for visiting your app's server.

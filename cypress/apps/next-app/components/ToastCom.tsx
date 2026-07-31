@@ -1,4 +1,4 @@
-import { Toast, ToastHeader, ToastBody } from "@govtechsg/sgds-react";
+import { Toast, ToastHeader, ToastBody } from "@sit-canvas/canvas-react";
 
 const ToastCom = () => {
     return <Toast show={true}>

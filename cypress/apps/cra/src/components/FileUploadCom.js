@@ -1,4 +1,4 @@
-import { FileUpload } from "@govtechsg/sgds-react"
+import { FileUpload } from "@sit-canvas/canvas-react"
 import { useState } from "react";
 
 const FileUploadCom = () => {

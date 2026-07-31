@@ -1,4 +1,4 @@
-import { QuantityToggle } from "@govtechsg/sgds-react";
+import { QuantityToggle } from "@sit-canvas/canvas-react";
 import { useState } from "react";
 
 const QuantityToggleCom = () => {

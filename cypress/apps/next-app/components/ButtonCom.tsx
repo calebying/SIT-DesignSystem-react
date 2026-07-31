@@ -1,4 +1,4 @@
-import { Button } from "@govtechsg/sgds-react"
+import { Button } from "@sit-canvas/canvas-react"
 
 const ButtonCom = () => {
     return (

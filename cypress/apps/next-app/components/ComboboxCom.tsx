@@ -1,4 +1,4 @@
-import { Combobox } from '@govtechsg/sgds-react/Combobox';
+import { Combobox } from '@sit-canvas/canvas-react/Combobox';
 
 const ComboboxCom = () => {
     const menuList = ['apple', 'orange', 'banana'];

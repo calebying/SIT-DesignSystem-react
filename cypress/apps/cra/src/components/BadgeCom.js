@@ -1,4 +1,4 @@
-import { Badge } from "@govtechsg/sgds-react"
+import { Badge } from "@sit-canvas/canvas-react"
 
 const BadgeCom = () => {
     return (

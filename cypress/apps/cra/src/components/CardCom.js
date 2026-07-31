@@ -1,4 +1,4 @@
-import { Card } from "@govtechsg/sgds-react"
+import { Card } from "@sit-canvas/canvas-react"
 
 const CardCom = () => {
     return <>

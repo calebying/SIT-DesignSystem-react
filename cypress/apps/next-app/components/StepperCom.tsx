@@ -1,5 +1,5 @@
 "use client"
-import { Stepper, useStep } from "@govtechsg/sgds-react";
+import { Stepper, useStep } from "@sit-canvas/canvas-react";
 
 const StepperCom = () => {
     const stepMethods = useStep([{

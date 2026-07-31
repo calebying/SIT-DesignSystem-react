@@ -1,4 +1,4 @@
-import { Table } from "@govtechsg/sgds-react"
+import { Table } from "@sit-canvas/canvas-react"
 
 const TableCom = () => {
     return (

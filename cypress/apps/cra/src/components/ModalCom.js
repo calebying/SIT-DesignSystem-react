@@ -1,4 +1,4 @@
-import { Button, Modal } from "@govtechsg/sgds-react";
+import { Button, Modal } from "@sit-canvas/canvas-react";
 import { useState } from "react";
 
 const ModalCom = () => {

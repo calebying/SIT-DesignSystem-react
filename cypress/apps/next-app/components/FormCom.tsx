@@ -1,5 +1,5 @@
 "use client"
-import { Button, Form } from "@govtechsg/sgds-react";
+import { Button, Form } from "@sit-canvas/canvas-react";
 import { FormEvent } from "react";
 
 const FormCom = () => {

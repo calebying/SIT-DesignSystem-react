@@ -1,9 +1,9 @@
 // Configuration
 
-@import '@govtechsg/sgds/sass/functions';
-@import '@govtechsg/sgds/sass/variables';
-@import '@govtechsg/sgds/sass/mixins';
-@import '@govtechsg/sgds/sass/utilities';
+@import '@sit-canvas/canvas-css/sass/functions';
+@import '@sit-canvas/canvas-css/sass/variables';
+@import '@sit-canvas/canvas-css/sass/mixins';
+@import '@sit-canvas/canvas-css/sass/utilities';
 $enable-cssgrid: true;
 $primary: #3fb247;
 $progress-bar-bg: $primary;
@@ -56,4 +56,4 @@ $utilities-text-colors: map-loop(
 );
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'bg');
 
-@import '@govtechsg/sgds/sass/sgds';
+@import '@sit-canvas/canvas-css/sass/sit-canvas';

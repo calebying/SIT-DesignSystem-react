@@ -1,4 +1,4 @@
-import { Alert, AlertLink } from "@govtechsg/sgds-react"
+import { Alert, AlertLink } from "@sit-canvas/canvas-react"
 
 const AlertCom = () => {
     return (

@@ -1,4 +1,4 @@
-import { Tab, Tabs } from "@govtechsg/sgds-react";
+import { Tab, Tabs } from "@sit-canvas/canvas-react";
 
 const TabsCom = () => {
     return (

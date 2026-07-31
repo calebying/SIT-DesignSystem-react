@@ -1,4 +1,4 @@
-import { Footer } from "@govtechsg/sgds-react"
+import { Footer } from "@sit-canvas/canvas-react"
 
 const FooterCom = () => {
     return (

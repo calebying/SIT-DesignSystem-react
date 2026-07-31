@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@govtechsg/sgds": "^2.3.6",
-    "@govtechsg/sgds-react": "file:../../../dist",
+    "@sit-canvas/canvas-css": "https://github.com/calebying/SIT-DesignSystem-css/archive/5866ca59e4443b200040a25c0810c8ff87aa04cd.tar.gz",
+    "@sit-canvas/canvas-react": "file:../../../dist",
     "bootstrap-icons": "^1.12.1",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",

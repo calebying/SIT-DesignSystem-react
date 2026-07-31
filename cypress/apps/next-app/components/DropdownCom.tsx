@@ -1,4 +1,4 @@
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "@govtechsg/sgds-react";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "@sit-canvas/canvas-react";
 
 const DropdownCom = () => {
     return (

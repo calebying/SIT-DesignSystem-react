@@ -1,5 +1,5 @@
 'use client'
-import { Navbar, Nav, Container, Row, Col } from '@govtechsg/sgds-react';
+import { Navbar, Nav, Container, Row, Col } from '@sit-canvas/canvas-react';
 import { useState } from 'react';
 
 const NavCom = () => {

@@ -1,5 +1,5 @@
 'use client'
-import { Pagination, Table } from '@govtechsg/sgds-react';
+import { Pagination, Table } from '@sit-canvas/canvas-react';
 import React, { useState, useEffect } from 'react';
 
 const PaginationCom = () => {

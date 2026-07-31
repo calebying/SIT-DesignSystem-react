@@ -1,4 +1,4 @@
-import { Button, Form } from "@govtechsg/sgds-react";
+import { Button, Form } from "@sit-canvas/canvas-react";
 
 const FormCom = () => {
     const onSubmit = (event) => {

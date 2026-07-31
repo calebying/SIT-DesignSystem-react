@@ -1,4 +1,4 @@
-import { SideNav } from "@govtechsg/sgds-react"
+import { SideNav } from "@sit-canvas/canvas-react"
 
 const SideNavCom = () => {
     return (

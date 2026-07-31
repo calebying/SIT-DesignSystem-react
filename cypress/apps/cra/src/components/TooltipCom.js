@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@govtechsg/sgds-react"
+import { Button, Tooltip } from "@sit-canvas/canvas-react"
 
 const TooltipCom = () => {
     return (

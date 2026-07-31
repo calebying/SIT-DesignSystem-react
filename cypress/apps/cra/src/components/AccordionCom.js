@@ -1,4 +1,4 @@
-import { Accordion } from '@govtechsg/sgds-react/Accordion';
+import { Accordion } from '@sit-canvas/canvas-react/Accordion';
 
 const AccordionCom = () => (
   <Accordion defaultActiveKey="0">

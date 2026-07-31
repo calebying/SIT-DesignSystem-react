@@ -1,4 +1,4 @@
-import { ProgressBar } from "@govtechsg/sgds-react";
+import { ProgressBar } from "@sit-canvas/canvas-react";
 
 const ProgressBarCom = () => {
     const now = 60;

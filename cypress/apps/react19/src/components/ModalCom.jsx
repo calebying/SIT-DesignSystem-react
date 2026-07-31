@@ -1,5 +1,5 @@
-import { Modal } from "@govtechsg/sgds-react/Modal";
-import { Button } from "@govtechsg/sgds-react/Button";
+import { Modal } from "@sit-canvas/canvas-react/Modal";
+import { Button } from "@sit-canvas/canvas-react/Button";
 import { useState } from "react";
 const ModalCom = () => {
     const [show, setShow] = useState(false);
