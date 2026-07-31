@@ -1,5 +1,5 @@
 name: Report a bug
-description: Tell us about a bug or issue you may have identified in @govtechsg/sgds-react.
+description: Tell us about a bug or issue you may have identified in @sit-canvas/canvas-react.
 title: "Provide a general summary of the issue"
 labels: [bug]
 assignees: "-"
@@ -9,9 +9,9 @@ body:
       label: Prerequisites
       description: Take a couple minutes to help our maintainers work faster.
       options:
-        - label: I have [searched](https://github.com/GovTechSG/sgds-govtech-react/issues) for duplicate or closed issues
+        - label: I have [searched](https://github.com/calebying/SIT-DesignSystem-react/issues) for duplicate or closed issues
           required: true
-        - label: I have read the [contributing guidelines](https://github.com/GovTechSG/sgds-govtech-react/blob/v2/CONTRIBUTING.md)
+        - label: I have read the [contributing guidelines](https://github.com/calebying/SIT-DesignSystem-react/blob/v2/CONTRIBUTING.md)
           required: true
   - type: textarea
     id: what-happened
@@ -47,7 +47,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: Describe your frontend stack. What version of React and @govtechsg/sgds-react are you using? CSR or SSR?
+      label: Describe your frontend stack. What version of React and @sit-canvas/canvas-react are you using? CSR or SSR?
       placeholder: "e.g., v5.1.0 or v4.5.2"
     validations:
       required: true

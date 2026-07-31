@@ -12,7 +12,7 @@
 }
 
 /* FAQ stylings */
-sgds-faq-grid{
+sit-faq-grid{
   display: grid;
   grid-template-columns: 3fr 1fr;
   row-gap: 1rem;

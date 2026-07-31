@@ -1,10 +1,10 @@
 // .storybook/manager.js
 
 import { addons } from '@storybook/addons';
-import sgdsTheme from './sgdsTheme';
+import canvasTheme from './canvasTheme';
 
 addons.setConfig({
-  theme: sgdsTheme,
+  theme: canvasTheme,
   panelPosition: 'right',
   enableShortcuts: true,
 });

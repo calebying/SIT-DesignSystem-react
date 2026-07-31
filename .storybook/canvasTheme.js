@@ -6,8 +6,8 @@ export default create({
   fontBase: '"Inter", sans-serif',
   fontCode: 'monospace',
 
-  brandTitle: 'SGDS React Storybook',
-  brandUrl: 'https://react.designsystem.tech.gov.sg/?path=/story/install--page',
+  brandTitle: 'Canvas React Storybook',
+  brandUrl: 'https://canvas.singaporetech.edu.sg/react/?path=/story/install--page',
   brandImage: logo,
   brandTarget: '_self',
 

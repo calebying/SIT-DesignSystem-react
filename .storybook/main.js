@@ -13,7 +13,7 @@ module.exports = {
       loader: 'string-replace-loader',
       options: {
         search: /__VERSION__/gm,
-        replace: packageLock.packages["node_modules/@govtechsg/sgds"].version,
+        replace: packageLock.packages["node_modules/@sit-canvas/canvas-css"].version,
       },
     });
     return config;

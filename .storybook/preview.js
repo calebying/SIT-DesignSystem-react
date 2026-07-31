@@ -6,7 +6,7 @@ export const parameters = {
   // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
   actions: { argTypesRegex: '^on.*' },
   docs: {
-    theme: themes.sgdsTheme,
+    theme: themes.canvasTheme,
     // source: {
     //   type: 'code',
     // },
