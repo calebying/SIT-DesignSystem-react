@@ -1,5 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
-import SgdsMasthead from '@govtechsg/sgds-web-component/react/masthead/index.js';
+import CanvasMasthead from '@sit-canvas/canvas-web-component/react/masthead/index.js';
 
 import {
   Form,
@@ -34,14 +34,14 @@ export const SinglePageTemplate = () => {
   };
   return (
     <div>
-      <SgdsMasthead />
-      <sgds-template-grid>
-        <sgds-content-area>
+      <CanvasMasthead />
+      <sit-template-grid>
+        <sit-content-area>
           <Breadcrumb>
             <Breadcrumb.Item href="">HOME</Breadcrumb.Item>
             <Breadcrumb.Item active>SIGN-UP</Breadcrumb.Item>
           </Breadcrumb>
-          <sgds-content-header-top>
+          <sit-content-header-top>
             <div>
               <h1>Sign-up</h1>
               <p className="text-muted">
@@ -60,8 +60,8 @@ export const SinglePageTemplate = () => {
               </Button>
               <Button variant="secondary">Next</Button>
             </div>
-          </sgds-content-header-top>
-          <sgds-content-body>
+          </sit-content-header-top>
+          <sit-content-body>
             <section className="shadow rounded p-5">
               <Col sm={8}>
                 <Form onSubmit={onSubmit}>
@@ -160,9 +160,9 @@ export const SinglePageTemplate = () => {
                 Submit
               </Button>
             </div>
-          </sgds-content-body>
-        </sgds-content-area>
-      </sgds-template-grid>
+          </sit-content-body>
+        </sit-content-area>
+      </sit-template-grid>
       <Footer>
         <Footer.Top>
           <Footer.Top.ContactLinks>

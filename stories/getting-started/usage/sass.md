@@ -1,10 +1,10 @@
 # Customisation with Sass
 
-You can change the base styles through overriding the sass variables. Find the whole list of sass variables <a href="https://github.com/GovTechSG/sgds/blob/v2/lib/sgds/sass/_variables.scss" target="_blank">here</a>.
+You can change the base styles through overriding the sass variables. Find the whole list of sass variables <a href="https://github.com/calebying/SIT-DesignSystem-css/blob/main/sass/_variables.scss" target="_blank">here</a>.
 
 > Pre-requisite: Setup sass loader in your project and complete installation instructions <a href="/story/getting-started-installation--page" target="_self">here</a>.
 
-> Make sure you have `@govtechsg/sgds` library installed.
+> Make sure you have `@sit-canvas/canvas-css` library installed.
 
 ## Basic customisation
 
@@ -13,14 +13,14 @@ Basic customisation involves overriding of variables that consist of a simple pr
 ```css
 // In styles/app.scss
 
-// Step 1: Override SGDS defaults
+// Step 1: Override Canvas defaults
 $primary: rgb(8, 11, 56);
 $secondary: #ff8c00;
 $warning: rgb(134, 37, 37);
 $enable-cssgrid: true;
 
-// Import all of sgds
-@import '@govtechsg/sgds/sass/sgds.scss';
+// Import all of canvas
+@import '@sit-canvas/canvas-css/sass/sit-canvas.scss';
 ```
 
 Then, in your app:
@@ -37,9 +37,9 @@ export default function App() {
 
 ## Advanced customisation
 
-### Example: Change SGDS primary colour
+### Example: Change Canvas primary colour
 
-In this example, we want to replace the all of the primary colour of SGDS. We do that via overriding the `$primary` and `$primarys` !default variables. To ensure any downstream dependencies related to `$primary`and `$primarys` also follow the same colour(s), we will update the following as well:
+In this example, we want to replace the all of the primary colour of Canvas. We do that via overriding the `$primary` and `$primarys` !default variables. To ensure any downstream dependencies related to `$primary`and `$primarys` also follow the same colour(s), we will update the following as well:
 
 1. `$theme-colors`,
 2. `$theme-colors-rgb`,
@@ -50,10 +50,10 @@ In this example, we want to replace the all of the primary colour of SGDS. We do
 
 ```css
 // Step 1: Include functions, variables ,mixins and utilities as you will likely need to use them for customisation
-@import '@govtechsg/sgds/sass/functions';
-@import '@govtechsg/sgds/sass/variables';
-@import '@govtechsg/sgds/sass/mixins';
-@import '@govtechsg/sgds/sass/utilities';
+@import '@sit-canvas/canvas-css/sass/functions';
+@import '@sit-canvas/canvas-css/sass/variables';
+@import '@sit-canvas/canvas-css/sass/mixins';
+@import '@sit-canvas/canvas-css/sass/utilities';
 
 // Step 2: Override the !default variables here.
 $primary: #3fb247;
@@ -97,6 +97,6 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'bg');
 $progress-bar-bg: $primary;
 ...
 
-//Step 4: Import all of sgds styles
-@import '@govtechsg/sgds/sass/sgds';
+//Step 4: Import all of canvas styles
+@import '@sit-canvas/canvas-css/sass/sit-canvas';
 ```

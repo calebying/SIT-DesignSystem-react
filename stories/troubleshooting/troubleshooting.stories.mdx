@@ -17,7 +17,7 @@ import {
 
 <br />
 
-<sgds-faq-grid class="mt-2">
+<sit-faq-grid class="mt-2">
 <div>
 <h3> Components </h3>
    <Accordion>
@@ -27,7 +27,7 @@ import {
     </AccordionHeader>
     <AccordionBody>
      <p>
-        The Masthead components sits in the <code>@govtechsg/sgds-web-component</code> library.
+        The Masthead components sits in the <code>@sit-canvas/canvas-web-component</code> library.
         See <a href="https://github.com/GovTechSG/sgds-govtech-react/issues/249#issuecomment-2247209504" target="_blank">answer</a>
      </p>
     </AccordionBody>
@@ -40,7 +40,7 @@ import {
       Jest encounters an unexpected token, cannot use import statement outside of a module
     </AccordionHeader>
     <AccordionBody>
-     <p> As Jest's support for ES modules are still experimental, you need to include <code>@govtechsg/sgds-react</code> package into <code>transformIgnorePatterns</code> in jest configuration.</p>
+     <p> As Jest's support for ES modules are still experimental, you need to include <code>@sit-canvas/canvas-react</code> package into <code>transformIgnorePatterns</code> in jest configuration.</p>
     <p>Depending on your application's setup, be careful of where your application is reading jest configuration from. For example, <a href="https://create-react-app.dev/docs/running-tests/#configuration" target="_blank">Create-React-App reads jest configuration from package.json by default </a>.
       If your test scripts are not configured to point to a separate jest.config.js file, the default configuration for jest in package.json will take precedence.</p>
      <p> For users compiling Jest with Babel, see solution <a target="_blank" href="https://github.com/GovTechSG/sgds-govtech-react/issues/202#issuecomment-1816602738">here</a></p>
@@ -53,11 +53,11 @@ import {
    <Accordion>
   <AccordionItem eventKey="0-nextjs">
     <AccordionHeader>
-      I would like to apply Next Link to SGDS anchor-tag components
+      I would like to apply Next Link to Canvas anchor-tag components
     </AccordionHeader>
     <AccordionBody>
      <p>
-     You can use Next Link with SGDS anchor-tag components by wrapping Next Link and assigning the href to Next Link instead of SGDS anchor-tag component. See NextJS documentation <a href="https://nextjs.org/docs/pages/api-reference/components/link#if-the-child-is-a-custom-component-that-wraps-an-a-tag" target="_blank">here</a>
+     You can use Next Link with Canvas anchor-tag components by wrapping Next Link and assigning the href to Next Link instead of Canvas anchor-tag component. See NextJS documentation <a href="https://nextjs.org/docs/pages/api-reference/components/link#if-the-child-is-a-custom-component-that-wraps-an-a-tag" target="_blank">here</a>
      </p>
     </AccordionBody>
   </AccordionItem>
@@ -70,10 +70,10 @@ import {
       <CardText>
         Head to GitHub to view or open a new issue
       </CardText>
-      <CardLink href="https://github.com/GovTechSG/sgds-govtech-react/issues/" target="_blank">
+      <CardLink href="https://github.com/calebying/SIT-DesignSystem-react/issues/" target="_blank">
         Learn more
       </CardLink>
     </CardBody>
   </Card>
   </div>
-</sgds-faq-grid>
+</sit-faq-grid>

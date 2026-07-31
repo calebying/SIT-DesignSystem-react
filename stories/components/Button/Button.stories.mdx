@@ -18,7 +18,7 @@ export const defaultTemplate = (args) => <Button {...args}>Default</Button>;
 ## API
 
 ```jsx
-import { Button } from '@govtechsg/sgds-react/Button';
+import { Button } from '@sit-canvas/canvas-react/Button';
 ```
 
 <ArgsTable story="Basic" />
@@ -69,7 +69,7 @@ For a lighter touch, Buttons also come in `outline-*` variants with no backgroun
 ## Link button
 
 Normally `<Button>` components will render a HTML `<button>` element. However you can render whatever you'd like, adding a href prop will automatically render an `<a/>` element.
-You can use the as prop to render whatever your heart desires. @govtechsg/sgds-react will take care of the proper ARIA roles for you.
+You can use the as prop to render whatever your heart desires. @sit-canvas/canvas-react will take care of the proper ARIA roles for you.
 
 <Canvas>
   <Story name="Link button">
@@ -165,7 +165,7 @@ Make buttons look inactive by adding the `disabled` prop to.
 
 Watch out! `<a>` elements don't naturally support a disabled attribute. In browsers that support it this is handled with a point-events: none style but not all browsers support it yet.
 
-@govtechsg/sgds-react will prevent any `onClick` handlers from firing regardless of the rendered element.
+@sit-canvas/canvas-react will prevent any `onClick` handlers from firing regardless of the rendered element.
 
 ## Loading state
 

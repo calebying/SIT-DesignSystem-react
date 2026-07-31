@@ -323,13 +323,13 @@ The `<Pagination>` component will include some props which is needed for the pag
 ## API
 
 ```jsx
-import { Pagination } from '@govtechsg/sgds-react/Pagination';
+import { Pagination } from '@sit-canvas/canvas-react/Pagination';
 ```
 
 <ArgsTable story="Basic" />
 
 ```jsx
-import { Pagination, Table } from '@govtechsg/sgds-react';
+import { Pagination, Table } from '@sit-canvas/canvas-react';
 import React, { useState, useEffect } from 'react';
 
 export const PaginationWTableTpl = () => {
@@ -635,4 +635,4 @@ it will decrement/increment to the end of the pages respectively.
 
 ## Accessibility
 
-The aria-label attribute has been added to the `<nav>` element of Pagination. This is because sgds's Nav and SideNav also use the `<nav>` element. Where there are multiple `<nav>` elements on a single page, all must be given a unique accessible name via `aria-label`.
+The aria-label attribute has been added to the `<nav>` element of Pagination. This is because Canvas's Nav and SideNav also use the `<nav>` element. Where there are multiple `<nav>` elements on a single page, all must be given a unique accessible name via `aria-label`.

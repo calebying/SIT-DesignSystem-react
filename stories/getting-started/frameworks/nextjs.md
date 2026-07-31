@@ -8,7 +8,7 @@ For versions before 2.3.0 , add "use client" in files where you import our compo
 
 ```jsx
 'use client';
-import { Alert } from '@govtechsg/sgds-react';
+import { Alert } from '@sit-canvas/canvas-react';
 import React from 'react';
 
 const App: React.FC = () => (
@@ -28,7 +28,7 @@ export default App;
 Since version 2.3+ , "use client" directive are incorporated in the components itself. Hence, you do not need to add the "use client" directive when importing the components. 
 
 ```jsx
-import { Alert, AlertLink } from '@govtechsg/sgds-react';
+import { Alert, AlertLink } from '@sit-canvas/canvas-react';
 import React from 'react';
 
 const App: React.FC = () => (

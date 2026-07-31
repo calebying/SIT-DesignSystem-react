@@ -45,7 +45,7 @@ It includes `<Toast.Header/>` ,` <Toast.Body/>`
 ## API
 
 ```jsx
-import { Toast } from '@govtechsg/sgds-react/Toast';
+import { Toast } from '@sit-canvas/canvas-react/Toast';
 ```
 
 <ArgsTable story="Basic" />
@@ -55,7 +55,7 @@ For more details, refer to https://react-bootstrap.github.io/docs/components/toa
 #### Code Sample
 
 ```jsx
-import { Toast } from '@govtechsg/sgds-react';
+import { Toast } from '@sit-canvas/canvas-react';
 
 export const ToastTemplate = (args) => {
   const [show, setShow] = useState(true);
@@ -99,17 +99,17 @@ See code example
 
 # Styles
 
-## Bootstrap vs SGDS
+## Bootstrap vs Canvas
 
-Default Toast uses SGDS Toast styling with not horizontal divider between Header and Body.
+Default Toast uses Canvas Toast styling with not horizontal divider between Header and Body.
 
-To achieve Bootstrap's default Toast styling, toggle `isSGDS` prop to `false`
+To achieve Bootstrap's default Toast styling, toggle `isCanvas` prop to `false`
 
 <Canvas>
-  <Story name="SGDS Toast" args={{ isSGDS: true }}>
+  <Story name="Canvas Toast" args={{ isCanvas: true }}>
     {Template.bind({})}
   </Story>
-  <Story name="Bootstrap Toast" args={{ isSGDS: false }}>
+  <Story name="Bootstrap Toast" args={{ isCanvas: false }}>
     {Template.bind({})}
   </Story>
 </Canvas>

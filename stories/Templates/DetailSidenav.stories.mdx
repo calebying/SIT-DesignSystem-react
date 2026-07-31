@@ -1,5 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
-import SgdsMasthead from '@govtechsg/sgds-web-component/react/masthead/index.js';
+import CanvasMasthead from '@sit-canvas/canvas-web-component/react/masthead/index.js';
 
 import {
   Form,
@@ -42,7 +42,7 @@ export const DetailSideNavTemplate = () => {
   };
   return (
     <div>
-      <SgdsMasthead />
+      <CanvasMasthead />
       <Navbar className="mt-4" expand="sm">
         <Navbar.Brand href="">
           <img
@@ -105,8 +105,8 @@ export const DetailSideNavTemplate = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <sgds-template-grid class="with-sidenav">
-        <sgds-aside-area>
+      <sit-template-grid class="with-sidenav">
+        <sit-aside-area>
           <SideNav activeKey={sideActive} activeNavLinkKey={sideActiveLink}>
             <SideNav.Item eventKey="1" onClick={() => clickSideNavItem('1')}>
               <SideNav.Button>Sub menu</SideNav.Button>
@@ -187,8 +187,8 @@ export const DetailSideNavTemplate = () => {
               </SideNav.Collapse>
             </SideNav.Item>
           </SideNav>
-        </sgds-aside-area>
-        <sgds-content-area>
+        </sit-aside-area>
+        <sit-content-area>
           <Breadcrumb>
             <Breadcrumb.Item href="">Home</Breadcrumb.Item>
             <Breadcrumb.Item href="">Library</Breadcrumb.Item>
@@ -208,8 +208,8 @@ export const DetailSideNavTemplate = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur.
           </p>
-        </sgds-content-area>
-      </sgds-template-grid>
+        </sit-content-area>
+      </sit-template-grid>
       <Footer>
         <Footer.Top>
           <Footer.Top.ContactLinks>

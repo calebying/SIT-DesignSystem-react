@@ -184,7 +184,7 @@ The default `<SideNav />` is close. When other `<SideNav.Button />` is clicked o
 ## API
 
 ```jsx
-import { SideNav } from '@govtechsg/sgds-react/SideNav';
+import { SideNav } from '@sit-canvas/canvas-react/SideNav';
 ```
 
 <ArgsTable story="Basic" />
@@ -479,10 +479,10 @@ View the example in Canvas fullscreen mode for better visualization of the stick
 
 export const StickySideNav = () => (
   <div>
-    <sgds-masthead></sgds-masthead>
+    <sit-masthead></sit-masthead>
     <NavbarComponent />
-    <sgds-template-grid class="with-sidenav">
-      <sgds-aside-area>
+    <sit-template-grid class="with-sidenav">
+      <sit-aside-area>
         <SideNav sticky>
           {Array.from(Array(10).keys()).map((_, i) => (
             <SideNav.Item eventKey="2" key={i}>
@@ -490,8 +490,8 @@ export const StickySideNav = () => (
             </SideNav.Item>
           ))}
         </SideNav>
-      </sgds-aside-area>
-      <sgds-content-area>
+      </sit-aside-area>
+      <sit-content-area>
         <p>
           Lorem ipsum dolor sit amet. Hic impedit optio aut molestiae soluta non
           voluptatem nobis et voluptatem atque vel delectus itaque aut sequi
@@ -528,8 +528,8 @@ export const StickySideNav = () => (
           atque dicta. Et molestiae rerum ad mollitia beatae et doloribus saepe
           et cupiditate ratione a officiis dolorem vel temporibus dolorem.{' '}
         </p>
-      </sgds-content-area>
-    </sgds-template-grid>
+      </sit-content-area>
+    </sit-template-grid>
     <FooterComponent />
   </div>
 );

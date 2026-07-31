@@ -29,7 +29,7 @@ export const templateCodeNav = `import {
   Col,
   Row,
   Container,
-} from '@govtechsg/sgds-react';
+} from '@sit-canvas/canvas-react';
 <Navbar>
   <Nav>
     <Nav.Item>
@@ -78,7 +78,7 @@ export const templateCodeNavDefaultActive = `import {
   Col,
   Row,
   Container,
-} from '@govtechsg/sgds-react';
+} from '@sit-canvas/canvas-react';
 <Navbar>
   <Nav defaultActiveKey="link-1">
     <Nav.Item>
@@ -122,7 +122,7 @@ export const templateCodeNavDefaultActive = `import {
 `;
 
 export const templateCodeNavActive = `
-import { Navbar, Nav, Container, Row, Col } from '@govtechsg/sgds-react';
+import { Navbar, Nav, Container, Row, Col } from '@sit-canvas/canvas-react';
 const ActiveKeyTemplate = () => {
   const [activeK, setActiveK] = React.useState('4');
   const [activeDropdownLink, setActiveDropdownLink] = React.useState('4.1');
@@ -460,7 +460,7 @@ In Nav, there are three kinds of children :
 2. Hoverable Dropdown : `<Nav.Dropdown>` , `<Nav.Dropdown.Item />` , `<Nav.Dropdown.Divider/>`, `<Nav.Dropdown.ItemText/>`
 3. Hoverable Dropdown - megamenu : `<Nav.Dropdown>` , `<Nav.Dropdown.Item />` , `<Nav.Dropdown.Divider/>`, `<Nav.Dropdown.ItemText/>`
 
-**NOTE** `Navbar` component is used in all examples here just to apply SGDS stylings
+**NOTE** `Navbar` component is used in all examples here just to apply Canvas stylings
 
 See example of all three types below;
 
@@ -484,7 +484,7 @@ See example of all three types below;
 ## API
 
 ```jsx
-import { Nav } from '@govtechsg/sgds-react/Nav';
+import { Nav } from '@sit-canvas/canvas-react/Nav';
 ```
 
 <ArgsTable story="Basic" />

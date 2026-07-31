@@ -17,10 +17,10 @@ import { HIDDEN_COMMON_PROPS } from '../../helpers';
 />
 
 export const templateCodeNavbar = `
-import { Navbar, Nav, NavDropdown } from '@govtechsg/sgds-react/Nav';
-import { Container } from '@govtechsg/sgds-react/Container';
-import { Row } from '@govtechsg/sgds-react/Row';
-import { Col } from '@govtechsg/sgds-react/Col';
+import { Navbar, Nav, NavDropdown } from '@sit-canvas/canvas-react/Nav';
+import { Container } from '@sit-canvas/canvas-react/Container';
+import { Row } from '@sit-canvas/canvas-react/Row';
+import { Col } from '@sit-canvas/canvas-react/Col';
 export const NavbarTemplate = (brandName) => {
   const [active, setActive] = useState('home');
   const clickNavbarItem = (eventKey) => {
@@ -438,7 +438,7 @@ export const PageContent = Template('Sticky Top Nav', null, textContent);
 ## API
 
 ```jsx
-import { Navbar } from '@govtechsg/sgds-react/Nav';
+import { Navbar } from '@sit-canvas/canvas-react/Nav';
 ```
 
 <ArgsTable story="Basic" />
@@ -450,7 +450,7 @@ For more detailed API documentation , refer to https://react-bootstrap.github.io
 Navbar is collapsible to accomodate to mobile versions. When collapsed, a collapsed menu hamburger toggle will be present.
 
 Pass in boolean , `sm`, `md`, `lg`, `xl`, `xxl` to `expand` prop to apply the breakpoint.
-The sizes applies the defined breakpoint styles from sgds. e.g. `.navbar-expand-sm`, `.navbar-expand-md`
+The sizes applies the defined breakpoint styles from Canvas. e.g. `.navbar-expand-sm`, `.navbar-expand-md`
 
 ```jsx
 // Always expanded

@@ -7,7 +7,7 @@ Jest support for ESM modules is still experimental. Configure jest to transpile 
 ```js
 ...
 transformIgnorePatterns: [
-    "/node_modules/(?!(@govtechsg/sgds-react)/)",
+    "/node_modules/(?!(@sit-canvas/canvas-react)/)",
   ]
 ```
 

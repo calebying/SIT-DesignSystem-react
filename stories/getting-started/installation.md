@@ -1,31 +1,31 @@
-# Step 1: Install SGDS react
+# Step 1: Install Canvas react
 
-React components powered by <a target="_blank" href="https://www.designsystem.gov.sg">Singapore Government Design System</a>
+React components powered by Canvas, the Singapore Institute of Technology design system.
 
 Some components in the library uses Bootstrap icons for certain components like Form, but does not ship with it. Install bootstrap-icons or use CDN if you need it. Please refer to <a href="https://icons.getbootstrap.com/#install" target="_blank">Bootstrap icons</a> for usage instructions
 
 ```js
 
-npm install @govtechsg/sgds-react
+npm install @sit-canvas/canvas-react
 
 ```
 
 # Step 2: Set up stylesheets
 
-The SGDS react library is not shipped with any included CSS. Apply `@govtechsg/sgds@latest` styles by installing the module or using CDN.
+The Canvas react library is not shipped with any included CSS. Apply `@sit-canvas/canvas-css@latest` styles by installing the module or using CDN.
 
 ## Method 1: Local installation
 
 ```js
 
-npm install @govtechsg/sgds
+npm install @sit-canvas/canvas-css
 ```
 
 Importing of stylesheet in the entry point of your application
 
 ```js
 // In the entry point
-import '@govtechsg/sgds/css/sgds.css';
+import '@sit-canvas/canvas-css/css/sit-canvas.css';
 ```
 
 ## Method 2: Using CDN
@@ -33,7 +33,7 @@ import '@govtechsg/sgds/css/sgds.css';
 ```js
 //In index.html
 <link
-  href="https://cdn.jsdelivr.net/npm/@govtechsg/sgds@__VERSION__/css/sgds.css"
+  href="https://cdn.jsdelivr.net/npm/@sit-canvas/canvas-css@__VERSION__/css/sit-canvas.css"
   rel="stylesheet"
   type="text/css"
 />
@@ -49,7 +49,7 @@ Below is an example of importing a single button component. More components to i
 
 ```js
 
-import { Button } from '@govtechsg/sgds-react/Button';
+import { Button } from '@sit-canvas/canvas-react/Button';
 
 ```
 
@@ -59,7 +59,7 @@ Import from the entry point of the component library.
 
 ```js
 
-import { Button } from '@govtechsg/sgds-react';
+import { Button } from '@sit-canvas/canvas-react';
 
 ```
 
