@@ -1,0 +1,47 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ThemeProvider, Button } from '../../../src/index';
+
+<Meta title="Components/ThemeProvider" component={ThemeProvider} />
+
+# ThemeProvider
+
+`ThemeProvider` is a React context provider used internally by every Canvas component (via the `useBootstrapPrefix` hook) to resolve each component's base CSS class prefix (e.g. `btn`, `card`, `popover`). Most consumers never need to render it directly — it exists so a custom-prefixed build of the library, or a consumer running a CSS class rename, can override the default prefixes for an entire subtree at once instead of passing `bsPrefix` to every component individually.
+
+`ThemeProvider` also carries an optional `dir` value (e.g. `"rtl"`), read via the `useIsRTL` hook, which components like `Tooltip` and `Popover` use to mirror their positioning classes for right-to-left layouts.
+
+export const Template = (args) => (
+  <ThemeProvider {...args}>
+    <Button>Prefixed Button</Button>
+  </ThemeProvider>
+);
+
+## API
+
+```jsx
+import { ThemeProvider } from '@sit-canvas/canvas-react/ThemeProvider';
+```
+
+<Canvas>
+  <Story
+    name="Custom prefix"
+    args={{ prefixes: { btn: 'my-btn' } }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Custom prefix" />
+
+In the story above, `Button` normally renders with a `btn` base class; wrapped in a `ThemeProvider` with `prefixes={{ btn: 'my-btn' }}`, it renders with `my-btn` instead — inspect the rendered `<button>` element to see the swapped class name.
+
+## Right-to-left
+
+<Canvas>
+  <Story name="RTL">
+    <ThemeProvider dir="rtl">
+      <div dir="rtl">
+        <Button>RTL context Button</Button>
+      </div>
+    </ThemeProvider>
+  </Story>
+</Canvas>

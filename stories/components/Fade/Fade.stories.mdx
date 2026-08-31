@@ -1,0 +1,72 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { useState } from 'react';
+import { Fade, Button } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/Fade"
+  component={Fade}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    in: { table: { disable: true } },
+  }}
+/>
+
+# Fade
+
+`Fade` animates its single child element in and out of view with an opacity transition. It's the default transition used by `Modal`, `Toast`, and `Overlay` — reach for it directly when you need a simple fade without those higher-level components.
+
+`Fade` takes exactly one child element and controls it via the `in` prop; it does not manage its own open/closed state.
+
+export const Template = () => {
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setShow(!show)}>
+        {show ? 'Hide' : 'Show'} content
+      </Button>
+      <Fade in={show}>
+        <div className="mt-2 p-3 bg-light border">
+          This content fades in and out instead of just
+          appearing/disappearing.
+        </div>
+      </Fade>
+    </>
+  );
+};
+
+## API
+
+```jsx
+import { Fade } from '@sit-canvas/canvas-react/Fade';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Unmount on exit
+
+Set `unmountOnExit` to remove the child from the DOM once it has fully faded out, instead of leaving it present but hidden.
+
+export const UnmountTemplate = () => {
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setShow(!show)}>
+        {show ? 'Hide' : 'Show'} content
+      </Button>
+      <Fade in={show} unmountOnExit>
+        <div className="mt-2 p-3 bg-light border">
+          This is removed from the DOM when hidden.
+        </div>
+      </Fade>
+    </>
+  );
+};
+
+<Canvas>
+  <Story name="Unmount on exit">{UnmountTemplate.bind({})}</Story>
+</Canvas>
