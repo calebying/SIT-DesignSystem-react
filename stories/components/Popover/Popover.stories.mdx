@@ -1,0 +1,129 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Popover, OverlayTrigger, Button, Row, Col } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/Popover"
+  component={Popover}
+  subcomponents={{
+    'Popover.Header': Popover.Header,
+    'Popover.Body': Popover.Body,
+  }}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    popper: { table: { disable: true } },
+    show: { table: { disable: true } },
+  }}
+/>
+
+# Popover
+
+`Popover` displays a small overlay of content anchored to a target element, used for contextual information that goes beyond a `Tooltip`.
+
+`Popover` is a lower-level building block: it renders the floating box itself (with an optional `Popover.Header` and `Popover.Body`), but does not manage its own visibility or positioning. Pair it with `OverlayTrigger` (or `Overlay`) to control when it shows and where it is placed, the same way `Tooltip` does internally.
+
+export const Template = (args) => (
+  <OverlayTrigger
+    trigger="click"
+    placement={args.placement}
+    overlay={
+      <Popover id="popover-basic" {...args}>
+        <Popover.Header>Popover title</Popover.Header>
+        <Popover.Body>
+          And here&apos;s some amazing content. It&apos;s very engaging.
+          right?
+        </Popover.Body>
+      </Popover>
+    }
+  >
+    <Button>Click to toggle Popover</Button>
+  </OverlayTrigger>
+);
+
+## API
+
+```jsx
+import { Popover, OverlayTrigger } from '@sit-canvas/canvas-react/Popover';
+```
+
+<Canvas>
+  <Story name="Basic" args={{ placement: 'right' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Placement
+
+`Popover` accepts the same `placement` values as `Tooltip` and `Overlay`, passed through from `OverlayTrigger`.
+
+<Canvas>
+  <Story name="Placements">
+    <div className="d-flex gap-2">
+      {['top', 'right', 'bottom', 'left'].map((placement) => (
+        <OverlayTrigger
+          key={placement}
+          trigger="click"
+          placement={placement}
+          overlay={
+            <Popover id={`popover-${placement}`}>
+              <Popover.Header>Popover on {placement}</Popover.Header>
+              <Popover.Body>
+                This Popover is placed on the <strong>{placement}</strong> of
+                the target.
+              </Popover.Body>
+            </Popover>
+          }
+        >
+          <Button variant="secondary">{placement}</Button>
+        </OverlayTrigger>
+      ))}
+    </div>
+  </Story>
+</Canvas>
+
+## Body-only shorthand
+
+Pass the `body` prop to skip `Popover.Header`/`Popover.Body` and render children directly inside a `Popover.Body`.
+
+<Canvas>
+  <Story name="Body shorthand">
+    <OverlayTrigger
+      trigger="click"
+      placement="right"
+      overlay={
+        <Popover id="popover-body-shorthand" body>
+          Simple popover content, no header needed.
+        </Popover>
+      }
+    >
+      <Button variant="secondary">Click for simple Popover</Button>
+    </OverlayTrigger>
+  </Story>
+</Canvas>
+
+## Trigger on hover
+
+Like `Tooltip`, `OverlayTrigger`'s `trigger` prop controls what shows the `Popover` — `hover`, `focus`, `click`, or an array of these.
+
+<Canvas>
+  <Story name="Hover trigger">
+    <OverlayTrigger
+      trigger={['hover', 'focus']}
+      placement="top"
+      overlay={
+        <Popover id="popover-hover">
+          <Popover.Header>Hover Popover</Popover.Header>
+          <Popover.Body>Shows on hover or keyboard focus.</Popover.Body>
+        </Popover>
+      }
+    >
+      <Button variant="secondary">Hover over me</Button>
+    </OverlayTrigger>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+`Popover` renders with `role="tooltip"`. Always pass a unique `id` — it is used by `OverlayTrigger`/`Overlay` to associate the popover with its target for assistive technology. Prefer `trigger={['hover', 'focus']}` (rather than `hover` alone) so keyboard-only and touch users can also reveal the popover's content.

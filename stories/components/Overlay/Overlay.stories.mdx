@@ -1,0 +1,63 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { useState, useRef } from 'react';
+import { Overlay, Button } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/Overlay"
+  component={Overlay}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    target: { table: { disable: true } },
+    show: { table: { disable: true } },
+    children: { table: { disable: true } },
+  }}
+/>
+
+# Overlay
+
+`Overlay` is the lowest-level positioning primitive in the library — it positions a floating element next to a `target`, using Popper.js, and can optionally close itself on an outside click (`rootClose`). It manages positioning only; it has no default look and no built-in trigger behavior.
+
+`Tooltip` and `Popover` (via `OverlayTrigger`) are built on top of `Overlay`. Reach for `Overlay` directly only when neither of those higher-level components fits — for example, a fully custom floating panel.
+
+`children` must be either a single React element, or a function that receives the injected positioning props (`ref`, `style`, `placement`, ...) and returns one.
+
+export const Template = () => {
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
+  return (
+    <>
+      <Button ref={target} onClick={() => setShow(!show)}>
+        Click me to toggle Overlay
+      </Button>
+      <Overlay target={target.current} show={show} placement="right" rootClose onHide={() => setShow(false)}>
+        {(overlayProps) => (
+          <div
+            {...overlayProps}
+            className="p-2 bg-dark text-white rounded"
+            style={{ ...overlayProps.style, maxWidth: 200 }}
+          >
+            This is custom Overlay content, positioned relative to the
+            button.
+          </div>
+        )}
+      </Overlay>
+    </>
+  );
+};
+
+## API
+
+```jsx
+import { Overlay } from '@sit-canvas/canvas-react/Overlay';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Accessibility
+
+Because `Overlay` renders arbitrary content with no semantics of its own, set an appropriate ARIA `role` (e.g. `role="tooltip"` or `role="dialog"`) and any labelling attributes on the element you render inside it — `Tooltip`/`Popover` already handle this for you.
