@@ -1,0 +1,48 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Row, Col } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta title="Components/Row" component={Row} argTypes={HIDDEN_COMMON_PROPS} />
+
+# Row
+
+`Row` is a Bootstrap grid row, used together with `Col` to lay out content responsively. `Row` wraps a set of `Col`s and provides the negative margins needed for the grid's gutters.
+
+export const Template = (args) => (
+  <Row {...args}>
+    <Col>Column 1</Col>
+    <Col>Column 2</Col>
+    <Col>Column 3</Col>
+  </Row>
+);
+
+## API
+
+```jsx
+import { Row, Col } from '@sit-canvas/canvas-react/Row';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Row columns
+
+Set `xs`, `sm`, `md`, `lg`, `xl`, or `xxl` on the `Row` to control how many equal-width `Col`s appear per line at that breakpoint, instead of sizing each `Col` individually.
+
+<Canvas>
+  <Story name="Row columns">
+    <Row xs={1} md={3}>
+      <Col>Column</Col>
+      <Col>Column</Col>
+      <Col>Column</Col>
+      <Col>Column</Col>
+      <Col>Column</Col>
+      <Col>Column</Col>
+    </Row>
+  </Story>
+</Canvas>
+
+See the `Col` documentation for sizing individual columns within a `Row`.

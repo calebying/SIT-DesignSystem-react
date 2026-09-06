@@ -1,0 +1,28 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { TableOfContents } from '../../../src';
+
+<Meta title="Components/TableOfContents" component={TableOfContents} />
+
+# TableOfContents
+
+A navigable list of in-page section links.
+
+<Canvas>
+  <Story name="Basic">
+    <TableOfContents header="On this page">
+      <TableOfContents.Item href="#introduction" active>
+        Introduction
+      </TableOfContents.Item>
+      <TableOfContents.Item href="#installation">Installation</TableOfContents.Item>
+      <TableOfContents.Item href="#usage">Usage</TableOfContents.Item>
+    </TableOfContents>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { TableOfContents } from '@sit-canvas/canvas-react/TableOfContents';
+```
+
+<ArgsTable of={TableOfContents} />

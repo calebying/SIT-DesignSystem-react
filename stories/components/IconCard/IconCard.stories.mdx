@@ -1,0 +1,31 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { IconCard, Icon } from '../../../src';
+
+<Meta title="Components/IconCard" component={IconCard} />
+
+# IconCard
+
+An icon-led content card. Composes this package's existing `Card`/`Card.Body`/`Card.Title`/
+`Card.Subtitle`/`Card.Text`/`Card.Footer` primitives rather than reimplementing them.
+
+<Canvas>
+  <Story name="Basic">
+    <div style={{ maxWidth: 320 }}>
+      <IconCard
+        icon={<Icon name="mortarboard-fill" size="xl" className="text-primary" />}
+        title="Certificate in Data Analytics"
+        subtitle="12 weeks · Part-time"
+        description="Learn to analyse and visualise data using industry-standard tools."
+        footer={<a href="#">Learn more</a>}
+      />
+    </div>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { IconCard } from '@sit-canvas/canvas-react/IconCard';
+```
+
+<ArgsTable of={IconCard} />

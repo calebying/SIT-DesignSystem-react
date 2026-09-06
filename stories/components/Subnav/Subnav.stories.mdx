@@ -1,0 +1,42 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Subnav, Nav } from '../../../src';
+
+<Meta title="Components/Subnav" component={Subnav} />
+
+# Subnav
+
+A secondary navigation bar with `header` and `actions` slots, and its own mobile collapse toggle
+(independent of `Mainnav`'s).
+
+<Canvas>
+  <Story name="Basic">
+    <Subnav
+      header="Courses"
+      actions={
+        <button type="button" className="btn btn-outline-secondary btn-sm">
+          Filter
+        </button>
+      }
+    >
+      <Nav.Item>
+        <Nav.Link href="#" active>
+          All
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#">In progress</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#">Completed</Nav.Link>
+      </Nav.Item>
+    </Subnav>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Subnav } from '@sit-canvas/canvas-react/Subnav';
+```
+
+<ArgsTable of={Subnav} />

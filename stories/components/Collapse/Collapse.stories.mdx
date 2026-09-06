@@ -1,0 +1,76 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { useState } from 'react';
+import { Collapse, Button } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/Collapse"
+  component={Collapse}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    in: { table: { disable: true } },
+  }}
+/>
+
+# Collapse
+
+`Collapse` animates its single child element in and out of view by transitioning its height (or width), rather than just toggling `display`. It's the lower-level primitive that `Accordion` and `Navbar`'s collapsible menu are built on — reach for it directly when you need a simple expand/collapse without either of those.
+
+`Collapse` takes exactly one child element and controls it via the `in` prop; it does not manage its own open/closed state.
+
+export const Template = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(!open)} aria-controls="collapse-example">
+        {open ? 'Hide' : 'Show'} content
+      </Button>
+      <Collapse in={open}>
+        <div id="collapse-example" className="mt-2 p-3 bg-light border">
+          This content collapses and expands smoothly instead of just
+          appearing/disappearing.
+        </div>
+      </Collapse>
+    </>
+  );
+};
+
+## API
+
+```jsx
+import { Collapse } from '@sit-canvas/canvas-react/Collapse';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Horizontal
+
+Set `dimension="width"` to collapse horizontally instead of vertically.
+
+export const HorizontalTemplate = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(!open)} aria-controls="collapse-horizontal-example">
+        {open ? 'Hide' : 'Show'} content
+      </Button>
+      <Collapse in={open} dimension="width">
+        <div
+          id="collapse-horizontal-example"
+          className="mt-2 p-3 bg-light border"
+          style={{ width: 200 }}
+        >
+          Horizontally collapsing content.
+        </div>
+      </Collapse>
+    </>
+  );
+};
+
+<Canvas>
+  <Story name="Horizontal">{HorizontalTemplate.bind({})}</Story>
+</Canvas>
