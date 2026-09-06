@@ -1,0 +1,58 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { IconButton } from '../../../src';
+
+<Meta
+  title="Components/IconButton"
+  component={IconButton}
+  argTypes={{
+    variant: {
+      options: ['primary', 'outline-primary', 'danger', 'outline-danger'],
+      control: { type: 'select' },
+    },
+    size: {
+      options: ['sm', 'lg'],
+      control: { type: 'select' },
+    },
+  }}
+/>
+
+# IconButton
+
+An icon-only button. Composes `Button` and `Icon` directly (not a separate implementation), so it
+gets `Button`'s full variant/size/href behaviour for free.
+
+export const Template = (args) => <IconButton {...args} />;
+
+<Canvas>
+  <Story name="Basic" args={{ name: 'trash', 'aria-label': 'Delete', variant: 'outline-primary' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { IconButton } from '@sit-canvas/canvas-react/IconButton';
+```
+
+<ArgsTable story="Basic" />
+
+## Loading
+
+<Canvas>
+  <Story name="Loading">
+    <IconButton name="trash" aria-label="Delete" loading />
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story name="Sizes">
+    <div className="d-flex gap-3 align-items-center">
+      <IconButton name="trash" aria-label="Delete" size="sm" />
+      <IconButton name="trash" aria-label="Delete" />
+      <IconButton name="trash" aria-label="Delete" size="lg" />
+    </div>
+  </Story>
+</Canvas>

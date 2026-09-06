@@ -1,0 +1,59 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Icon } from '../../../src';
+
+<Meta
+  title="Components/Icon"
+  component={Icon}
+  argTypes={{
+    size: {
+      options: ['xs', 'sm', 'md', 'lg', 'xl', '2-xl', '3-xl'],
+      control: { type: 'select' },
+    },
+  }}
+/>
+
+# Icon
+
+Renders a [bootstrap-icons](https://icons.getbootstrap.com/) glyph by name, at one of this design
+system's usual size tiers.
+
+export const Template = (args) => <Icon {...args} />;
+
+<Canvas>
+  <Story name="Basic" args={{ name: 'check-circle', size: 'lg' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Icon } from '@sit-canvas/canvas-react/Icon';
+```
+
+<ArgsTable story="Basic" />
+
+## Sizes
+
+<Canvas>
+  <Story name="Sizes">
+    <div className="d-flex gap-3 align-items-end">
+      <Icon name="check-circle" size="xs" />
+      <Icon name="check-circle" size="sm" />
+      <Icon name="check-circle" size="md" />
+      <Icon name="check-circle" size="lg" />
+      <Icon name="check-circle" size="xl" />
+    </div>
+  </Story>
+</Canvas>
+
+## Accessible label
+
+An icon with no `ariaLabel` is decorative (`aria-hidden`). Set `ariaLabel` when the icon conveys
+meaning on its own, with no adjacent text.
+
+<Canvas>
+  <Story name="Labelled">
+    <Icon name="exclamation-triangle-fill" ariaLabel="Warning" className="text-warning" />
+  </Story>
+</Canvas>
