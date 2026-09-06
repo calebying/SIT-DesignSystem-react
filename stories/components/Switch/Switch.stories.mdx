@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Switch } from '../../../src';
+
+<Meta title="Components/Switch" component={Switch} />
+
+# Switch
+
+`Switch` already existed as `Form/Switch.tsx`, exported top-level only as `FormSwitch` -- this
+re-exports it under a dedicated, discoverable `Switch` name instead of duplicating its
+implementation. Not a new component; a new, more discoverable name for an existing one.
+
+<Canvas>
+  <Story name="Basic">
+    <Switch id="dark-mode" label="Dark mode" />
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Switch } from '@sit-canvas/canvas-react/Switch';
+```
+
+<ArgsTable of={Switch} />

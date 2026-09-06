@@ -1,0 +1,38 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Checkbox } from '../../../src';
+
+<Meta title="Components/Checkbox" component={Checkbox} />
+
+# Checkbox
+
+A dedicated, discoverable `Checkbox` -- fixes this repo's generic `FormCheck` to `type="checkbox"`,
+the same "fix one prop" pattern `Form/Switch.tsx` already uses for `type="switch"`, rather than
+reimplementing checkbox rendering.
+
+<Canvas>
+  <Story name="Basic">
+    <Checkbox id="terms" label="I agree to the terms and conditions" />
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Checkbox } from '@sit-canvas/canvas-react/Checkbox';
+```
+
+<ArgsTable of={Checkbox} />
+
+## Checkbox.Group
+
+Groups checkboxes under one legend, sharing a `name` for form submission.
+
+<Canvas>
+  <Story name="Group">
+    <Checkbox.Group label="Interests" name="interests">
+      <Checkbox id="sports" value="sports" label="Sports" />
+      <Checkbox id="music" value="music" label="Music" />
+      <Checkbox id="reading" value="reading" label="Reading" />
+    </Checkbox.Group>
+  </Story>
+</Canvas>

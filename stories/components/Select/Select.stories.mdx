@@ -1,0 +1,42 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { useState } from 'react';
+import { Select } from '../../../src';
+
+<Meta title="Components/Select" component={Select} />
+
+# Select
+
+A closed-list select dropdown -- distinct from the existing `Combobox` (a free-text typeahead
+filtering a suggestion list). Composes this package's existing `Dropdown`/`Dropdown.Toggle`/
+`Dropdown.Menu` primitives (the same ones `Combobox` itself already uses internally), with the
+corrected `role="combobox"` (toggle) / `role="listbox"` (menu) / `role="option"` (each option) ARIA
+pattern -- the same corrected shape `Combobox` already uses, verified first rather than assumed.
+
+export const Template = () => {
+  const [value, setValue] = useState('sg');
+  return (
+    <Select value={value} onChange={setValue} placeholder="Choose a country">
+      <Select.Option value="sg">Singapore</Select.Option>
+      <Select.Option value="my">Malaysia</Select.Option>
+      <Select.Option value="id">Indonesia</Select.Option>
+    </Select>
+  );
+};
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Select } from '@sit-canvas/canvas-react/Select';
+```
+
+<ArgsTable of={Select} />
+
+**Known, minor limitation, not fixed here:** the underlying `Dropdown.Toggle` hardcodes
+`aria-haspopup="menu"` in its own render (checked directly, not assumed) -- passing
+`aria-haspopup="listbox"` on `Select`'s toggle is silently overridden. `"menu"` is still a valid
+(if less precise) `aria-haspopup` value; the roles that actually mattered for the corrected ARIA
+pattern (`combobox`/`listbox`/`option`, not the old `menu` role) are all correct.
