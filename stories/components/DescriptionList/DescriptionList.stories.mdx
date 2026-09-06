@@ -1,0 +1,49 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { DescriptionList } from '../../../src';
+
+<Meta title="Components/DescriptionList" component={DescriptionList} />
+
+# DescriptionList
+
+A label/data pair. The first child is the label, the rest is the data. Place one or more inside a
+`<DescriptionList.Group>` for a titled group.
+
+<Canvas>
+  <Story name="Basic">
+    <DescriptionList.Group title="Contact details">
+      <DescriptionList>
+        Name
+        <span>Jane Tan</span>
+      </DescriptionList>
+      <DescriptionList>
+        Email
+        <span>jane.tan@example.com</span>
+      </DescriptionList>
+    </DescriptionList.Group>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { DescriptionList } from '@sit-canvas/canvas-react/DescriptionList';
+```
+
+<ArgsTable of={DescriptionList} />
+
+## Stacked
+
+<Canvas>
+  <Story name="Stacked">
+    <DescriptionList.Group title="Contact details" stacked>
+      <DescriptionList>
+        Name
+        <span>Jane Tan</span>
+      </DescriptionList>
+      <DescriptionList>
+        Email
+        <span>jane.tan@example.com</span>
+      </DescriptionList>
+    </DescriptionList.Group>
+  </Story>
+</Canvas>
