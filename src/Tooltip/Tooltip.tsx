@@ -53,10 +53,11 @@ export const Tooltip: React.FC<TooltipProps> = ({
         'aria-describedby': tooltipId,
       })}
       <Overlay target={target.current} show={show} placement={placement} rootClose={true} onHide={() => setShow(false)}>
-        {(props) => (
+        {(overlayProps) => (
           <TooltipBox
-            {...props}
             id={tooltipId}
+            {...props}
+            {...overlayProps}
           >
             {content}
           </TooltipBox>
