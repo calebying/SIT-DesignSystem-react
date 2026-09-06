@@ -1,0 +1,26 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { SystemBanner } from '../../../src';
+
+<Meta title="Components/SystemBanner" component={SystemBanner} />
+
+# SystemBanner
+
+A full-width, site-wide notice banner pinned above the main content (maintenance windows, incident
+status, etc). Its dismiss behaviour follows the same `useUncontrolled` + `CloseButton` pattern this
+package's own `Alert` component already uses.
+
+<Canvas>
+  <Story name="Basic">
+    <SystemBanner dismissible>
+      Scheduled maintenance tonight from 11pm to 1am. Some features may be unavailable.
+    </SystemBanner>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { SystemBanner } from '@sit-canvas/canvas-react/SystemBanner';
+```
+
+<ArgsTable of={SystemBanner} />

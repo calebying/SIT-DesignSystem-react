@@ -1,0 +1,50 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Sidebar } from '../../../src';
+
+<Meta
+  title="Components/Sidebar"
+  component={Sidebar}
+  argTypes={{
+    variant: {
+      options: ['collapsible', 'persistent', 'overlay'],
+      control: { type: 'select' },
+    },
+  }}
+/>
+
+# Sidebar
+
+A collapsible sidebar shell. Composes this package's existing `SideNav` primitive for its
+navigation content (see `Components/SideNav`) and adds the outer chrome sit-sidebar has that
+SideNav does not: collapse/scrim/variant behaviour and `upper`/`lower` header/footer slots.
+
+<Canvas>
+  <Story name="Basic">
+    <div style={{ height: 320 }}>
+      <Sidebar upper={<strong>SIT</strong>} lower={<small>v1.0</small>}>
+        <Sidebar.Item eventKey="home">
+          <Sidebar.Link href="#">Home</Sidebar.Link>
+        </Sidebar.Item>
+        <Sidebar.Item eventKey="courses">
+          <Sidebar.Link href="#">Courses</Sidebar.Link>
+        </Sidebar.Item>
+      </Sidebar>
+    </div>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Sidebar } from '@sit-canvas/canvas-react/Sidebar';
+```
+
+<ArgsTable of={Sidebar} />
+
+**Known gap, not fixed in this pass:** the outer chrome classes this component adds
+(`sidebar`, `sidebar-{variant}`, `sidebar-collapsed`, `sidebar-scrim`, `sidebar-upper`,
+`sidebar-content`, `sidebar-lower`) don't have compiled CSS behind them in the current
+`@sit-canvas/canvas-css` release yet -- only the Bootstrap utility classes alongside them
+(`d-flex`, `flex-column`, `h-100`, `overflow-auto`) render visually today. The component's
+structure and prop API are real and tested; the dedicated sidebar visual treatment is a real,
+separate follow-up in the CSS package.
