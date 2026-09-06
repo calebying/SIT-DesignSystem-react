@@ -1,0 +1,42 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { useState } from 'react';
+import { Drawer, Button } from '../../../src';
+
+<Meta
+  title="Components/Drawer"
+  component={Drawer}
+  argTypes={{
+    placement: { options: ['top', 'end', 'bottom', 'start'], control: { type: 'select' } },
+    size: { options: ['sm', 'md', 'lg'], control: { type: 'select' } },
+  }}
+/>
+
+# Drawer
+
+A slide-in panel, built on Bootstrap's real
+[offcanvas component](https://getbootstrap.com/docs/5.2/components/offcanvas/) rather than a
+bespoke implementation.
+
+export const Template = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open drawer</Button>
+      <Drawer open={open} title="Filters" onClose={() => setOpen(false)}>
+        Filter content goes here.
+      </Drawer>
+    </>
+  );
+};
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Drawer } from '@sit-canvas/canvas-react/Drawer';
+```
+
+<ArgsTable of={Drawer} />

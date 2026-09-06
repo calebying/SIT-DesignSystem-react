@@ -1,0 +1,41 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Divider } from '../../../src';
+
+<Meta
+  title="Components/Divider"
+  component={Divider}
+  argTypes={{
+    orientation: { options: ['horizontal', 'vertical'], control: { type: 'select' } },
+    thickness: { options: ['thin', 'thick', 'thicker'], control: { type: 'select' } },
+  }}
+/>
+
+# Divider
+
+A visual separator, horizontal or vertical.
+
+<Canvas>
+  <Story name="Basic">
+    <Divider />
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Divider } from '@sit-canvas/canvas-react/Divider';
+```
+
+<ArgsTable of={Divider} />
+
+## Vertical
+
+<Canvas>
+  <Story name="Vertical">
+    <div style={{ height: 60, display: 'flex', alignItems: 'center' }}>
+      <span>Left</span>
+      <Divider orientation="vertical" className="mx-3" />
+      <span>Right</span>
+    </div>
+  </Story>
+</Canvas>

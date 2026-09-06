@@ -1,0 +1,28 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { OverflowMenu, Dropdown } from '../../../src';
+
+<Meta title="Components/OverflowMenu" component={OverflowMenu} />
+
+# OverflowMenu
+
+A "..." menu button that reveals contextual actions. Composes this package's existing `Dropdown`/
+`Dropdown.Toggle`/`Dropdown.Menu` primitives (see `Components/Dropdown`) rather than reimplementing
+them.
+
+<Canvas>
+  <Story name="Basic">
+    <OverflowMenu ariaLabel="Row actions">
+      <Dropdown.Item>Edit</Dropdown.Item>
+      <Dropdown.Item>Duplicate</Dropdown.Item>
+      <Dropdown.Item className="text-danger">Delete</Dropdown.Item>
+    </OverflowMenu>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { OverflowMenu } from '@sit-canvas/canvas-react/OverflowMenu';
+```
+
+<ArgsTable of={OverflowMenu} />

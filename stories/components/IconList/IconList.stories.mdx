@@ -1,0 +1,36 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { IconList, Icon } from '../../../src';
+
+<Meta
+  title="Components/IconList"
+  component={IconList}
+  argTypes={{ size: { options: ['sm', 'md', 'lg'], control: { type: 'select' } } }}
+/>
+
+# IconList
+
+A list where each item has a leading icon.
+
+<Canvas>
+  <Story name="Basic">
+    <IconList>
+      <IconList.Item icon={<Icon name="check-circle-fill" className="text-success" />}>
+        Real-time collaboration
+      </IconList.Item>
+      <IconList.Item icon={<Icon name="check-circle-fill" className="text-success" />}>
+        Offline support
+      </IconList.Item>
+      <IconList.Item icon={<Icon name="check-circle-fill" className="text-success" />}>
+        Enterprise SSO
+      </IconList.Item>
+    </IconList>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { IconList } from '@sit-canvas/canvas-react/IconList';
+```
+
+<ArgsTable of={IconList} />
