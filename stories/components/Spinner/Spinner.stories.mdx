@@ -1,0 +1,57 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Spinner } from '../../../src';
+
+<Meta
+  title="Components/Spinner"
+  component={Spinner}
+  argTypes={{
+    animation: {
+      options: ['border', 'grow'],
+      control: { type: 'select' },
+    },
+  }}
+/>
+
+# Spinner
+
+Indicates a loading state, built on Bootstrap's real
+[spinner component](https://getbootstrap.com/docs/5.2/components/spinners/).
+
+export const Template = (args) => <Spinner {...args} />;
+
+<Canvas>
+  <Story name="Basic" args={{ animation: 'border' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Spinner } from '@sit-canvas/canvas-react/Spinner';
+```
+
+<ArgsTable story="Basic" />
+
+## Animations
+
+<Canvas>
+  <Story name="Animations">
+    <div className="d-flex gap-3">
+      <Spinner animation="border" />
+      <Spinner animation="grow" />
+    </div>
+  </Story>
+</Canvas>
+
+## Variants
+
+<Canvas>
+  <Story name="Variants">
+    <div className="d-flex gap-3">
+      <Spinner variant="primary" />
+      <Spinner variant="danger" />
+      <Spinner variant="success" />
+    </div>
+  </Story>
+</Canvas>

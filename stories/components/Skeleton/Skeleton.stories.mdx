@@ -1,0 +1,59 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Skeleton } from '../../../src';
+
+<Meta
+  title="Components/Skeleton"
+  component={Skeleton}
+  argTypes={{
+    animation: {
+      options: ['glow', 'wave', 'none'],
+      control: { type: 'select' },
+    },
+    size: {
+      options: ['xs', 'sm', 'lg'],
+      control: { type: 'select' },
+    },
+  }}
+/>
+
+# Skeleton
+
+A loading placeholder, built on Bootstrap's real
+[placeholder component](https://getbootstrap.com/docs/5.2/components/placeholders/) rather than a
+hand-rolled shimmer treatment.
+
+export const Template = (args) => <Skeleton {...args} />;
+
+<Canvas>
+  <Story name="Basic" args={{ width: '240px', height: '1.2em' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Skeleton } from '@sit-canvas/canvas-react/Skeleton';
+```
+
+<ArgsTable story="Basic" />
+
+## Multiple rows
+
+<Canvas>
+  <Story name="Rows" args={{ rows: 3, width: '100%' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Animations
+
+<Canvas>
+  <Story name="Animations">
+    <div className="d-flex flex-column gap-3">
+      <Skeleton width="200px" animation="glow" />
+      <Skeleton width="200px" animation="wave" />
+      <Skeleton width="200px" animation="none" />
+    </div>
+  </Story>
+</Canvas>
