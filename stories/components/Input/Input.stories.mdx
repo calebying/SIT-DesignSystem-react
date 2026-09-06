@@ -1,0 +1,28 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Input } from '../../../src';
+
+<Meta
+  title="Components/Input"
+  component={Input}
+  argTypes={{ size: { options: [undefined, 'sm', 'lg'], control: { type: 'select' } } }}
+/>
+
+# Input
+
+A dedicated, discoverable `Input` -- this repo's generic `FormControl` already renders a text
+input by default, this just gives it a name matching sit-input rather than the generic Bootstrap
+`Form.Control` naming.
+
+<Canvas>
+  <Story name="Basic" args={{ placeholder: 'Jane Tan' }}>
+    {(args) => <Input {...args} />}
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Input } from '@sit-canvas/canvas-react/Input';
+```
+
+<ArgsTable story="Basic" />

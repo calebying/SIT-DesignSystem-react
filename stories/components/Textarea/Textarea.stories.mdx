@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Textarea } from '../../../src';
+
+<Meta title="Components/Textarea" component={Textarea} />
+
+# Textarea
+
+A dedicated, discoverable `Textarea` -- fixes this repo's generic `FormControl` to
+`as="textarea"`, the same "fix one prop" pattern used across this branch's other dedicated form
+components.
+
+<Canvas>
+  <Story name="Basic" args={{ rows: 4, placeholder: 'Tell us more...' }}>
+    {(args) => <Textarea {...args} />}
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Textarea } from '@sit-canvas/canvas-react/Textarea';
+```
+
+<ArgsTable story="Basic" />

@@ -1,0 +1,44 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { useState } from 'react';
+import { Radio } from '../../../src';
+
+<Meta title="Components/Radio" component={Radio} />
+
+# Radio
+
+A dedicated, discoverable `Radio` -- fixes this repo's generic `FormCheck` to `type="radio"`, the
+same pattern used for `Checkbox` and `Form/Switch.tsx`.
+
+<Canvas>
+  <Story name="Basic">
+    <Radio id="email-only" label="Email" name="contact-basic" />
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Radio } from '@sit-canvas/canvas-react/Radio';
+```
+
+<ArgsTable of={Radio} />
+
+## Radio.Group
+
+Groups radios under one shared `name` (native mutual exclusivity) plus a controlled
+`value`/`onChange` pair.
+
+export const GroupTemplate = () => {
+  const [value, setValue] = useState('email');
+  return (
+    <Radio.Group label="Preferred contact method" value={value} onChange={setValue}>
+      <Radio id="contact-email" value="email" label="Email" />
+      <Radio id="contact-phone" value="phone" label="Phone" />
+      <Radio id="contact-mail" value="mail" label="Mail" />
+    </Radio.Group>
+  );
+};
+
+<Canvas>
+  <Story name="Group">{GroupTemplate.bind({})}</Story>
+</Canvas>
