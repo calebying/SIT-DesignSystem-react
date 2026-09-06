@@ -1,0 +1,57 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Mainnav, Nav, NavDropdown } from '../../../src';
+
+<Meta title="Components/Mainnav" component={Mainnav} />
+
+# Mainnav
+
+The SIT-branded main navigation bar. Composes this package's existing `Navbar`/`Navbar.Brand`/
+`Navbar.Toggle`/`Navbar.Collapse`/`Nav` primitives (see `Components/Navigation/Navbar`) rather than
+reimplementing them, and adds sit-mainnav's own slot API: `brand`, `end`, and `nonCollapsible`.
+
+<Canvas>
+  <Story name="Basic">
+    <Mainnav brand="SIT" brandHref="#">
+      <Nav.Item>
+        <Nav.Link href="#" active>
+          Home
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#">Courses</Nav.Link>
+      </Nav.Item>
+      <NavDropdown title="More" id="mainnav-more">
+        <NavDropdown.Item href="#">About</NavDropdown.Item>
+        <NavDropdown.Item href="#">Contact</NavDropdown.Item>
+      </NavDropdown>
+    </Mainnav>
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Mainnav } from '@sit-canvas/canvas-react/Mainnav';
+```
+
+<ArgsTable of={Mainnav} />
+
+## With end and non-collapsible content
+
+<Canvas>
+  <Story name="With end content">
+    <Mainnav
+      brand="SIT"
+      brandHref="#"
+      end={
+        <button type="button" className="btn btn-outline-primary btn-sm">
+          Sign in
+        </button>
+      }
+    >
+      <Nav.Item>
+        <Nav.Link href="#">Home</Nav.Link>
+      </Nav.Item>
+    </Mainnav>
+  </Story>
+</Canvas>

@@ -1,0 +1,123 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { SplitButton, Dropdown } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS, VARIANT } from '../../helpers';
+
+<Meta
+  title="Components/SplitButton"
+  component={SplitButton}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    variant: {
+      control: { type: 'select' },
+      options: VARIANT,
+    },
+    size: {
+      control: { type: 'select' },
+      options: [undefined, 'sm', 'lg'],
+    },
+    onClick: { table: { disable: true } },
+  }}
+/>
+
+# Split Button
+
+`SplitButton` is a convenience component that renders a `Button` next to a `Dropdown.Toggle`, grouped together in a `ButtonGroup`. It is built for the common case of "a primary action, plus a menu of related actions".
+
+The left-hand `Button` fires its own `onClick` (or acts as a link when `href` is set); the right-hand toggle opens a `Dropdown.Menu` built from the `children` you pass in, exactly like a regular `Dropdown`.
+
+export const Template = (args) => (
+  <SplitButton {...args}>
+    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+    <Dropdown.Item eventKey="3">Something else</Dropdown.Item>
+    <Dropdown.Divider />
+    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+  </SplitButton>
+);
+
+## API
+
+```jsx
+import { SplitButton } from '@sit-canvas/canvas-react/SplitButton';
+```
+
+<Canvas>
+  <Story name="Basic" args={{ id: 'split-button-basic', title: 'Action' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Variants
+
+`SplitButton` accepts the same `variant` values as `Button`, applied to both the action button and the toggle.
+
+<Canvas>
+  <Story name="Variants">
+    <div className="d-flex gap-2 flex-wrap">
+      {['primary', 'secondary', 'success', 'danger'].map((variant) => (
+        <SplitButton
+          key={variant}
+          id={`split-button-${variant}`}
+          title={variant}
+          variant={variant}
+        >
+          <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+        </SplitButton>
+      ))}
+    </div>
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story name="Sizes">
+    <div className="d-flex align-items-center gap-2 flex-wrap">
+      <SplitButton id="split-button-lg" title="Large" size="lg">
+        <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+      </SplitButton>
+      <SplitButton id="split-button-default" title="Default">
+        <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+      </SplitButton>
+      <SplitButton id="split-button-sm" title="Small" size="sm">
+        <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+      </SplitButton>
+    </div>
+  </Story>
+</Canvas>
+
+## Disabled
+
+Setting `disabled` disables both the action `Button` and the `Dropdown.Toggle`.
+
+<Canvas>
+  <Story name="Disabled">
+    <SplitButton id="split-button-disabled" title="Disabled" disabled>
+      <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+    </SplitButton>
+  </Story>
+</Canvas>
+
+## As a link
+
+Passing `href` (and optionally `target`) turns the action button into an anchor, while the toggle keeps opening the menu.
+
+<Canvas>
+  <Story name="As a link">
+    <SplitButton
+      id="split-button-link"
+      title="Go somewhere"
+      href="#"
+      target="_blank"
+    >
+      <Dropdown.Item eventKey="1">Related action</Dropdown.Item>
+    </SplitButton>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+`id` is required on `SplitButton` — it is applied to the `Dropdown.Toggle` and is necessary for assistive technologies. The toggle also renders a visually-hidden label (`"Toggle dropdown"` by default) so screen reader users understand its purpose separately from the action button's `title`; override it with the `toggleLabel` prop when the default wording doesn't fit the context.

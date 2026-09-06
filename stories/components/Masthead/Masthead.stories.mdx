@@ -1,0 +1,27 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Masthead } from '../../../src';
+
+<Meta title="Components/Masthead" component={Masthead} />
+
+# Masthead
+
+The official government banner every .gov.sg digital service places at the top of the page.
+Simplified from the web-component package's exact SG-crest SVG artwork to a bootstrap-icons flag
+glyph -- a documented simplification, not a missing feature; the identify-toggle behaviour and
+layout are otherwise faithful.
+
+<Canvas>
+  <Story name="Basic">
+    <Masthead />
+  </Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Masthead } from '@sit-canvas/canvas-react/Masthead';
+```
+
+<ArgsTable of={Masthead} />
+
+Click "How to identify" to expand the identification panel.

@@ -1,0 +1,55 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Container } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/Container"
+  component={Container}
+  argTypes={HIDDEN_COMMON_PROPS}
+/>
+
+# Container
+
+`Container` is the outermost grid wrapper — it centers your content horizontally and applies responsive max-widths and horizontal padding. Use it as the root of a page or section that contains `Row`/`Col` grid layouts.
+
+export const Template = (args) => (
+  <Container {...args} className="bg-light border">
+    Container content
+  </Container>
+);
+
+## API
+
+```jsx
+import { Container } from '@sit-canvas/canvas-react/Container';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Fluid
+
+Set `fluid` to make the `Container` span the full width of the viewport at every breakpoint, instead of stepping through fixed max-widths.
+
+<Canvas>
+  <Story name="Fluid">
+    <Container fluid className="bg-light border">
+      Fluid container content
+    </Container>
+  </Story>
+</Canvas>
+
+## Responsive fluid
+
+Set `fluid` to a specific breakpoint (`sm`, `md`, `lg`, `xl`, `xxl`) to make the `Container` 100% wide until that breakpoint, then switch to the fixed-width behavior.
+
+<Canvas>
+  <Story name="Responsive fluid">
+    <Container fluid="md" className="bg-light border">
+      100% wide until the md breakpoint
+    </Container>
+  </Story>
+</Canvas>
