@@ -80,6 +80,23 @@ describe('Tooltip', () => {
     );
   });
 
+  it('click tooltip should forward outer rest props (e.g. aria-label) to the DOM', async () => {
+    const { container } = render(
+      <Tooltip content="default tooltip" type="click" aria-label="my tooltip label" data-testid="click-tooltip">
+        <button>Tooltip Content</button>
+      </Tooltip>
+    );
+    const $button = container.querySelector('button');
+
+    fireEvent.click($button as HTMLButtonElement);
+    await waitFor(() => {
+      const $tooltip = screen.queryByRole('tooltip');
+      expect($tooltip).not.toBeNull();
+      expect($tooltip?.getAttribute('aria-label')).toEqual('my tooltip label');
+      expect($tooltip?.getAttribute('data-testid')).toEqual('click-tooltip');
+    });
+  });
+
   it('accepts a Component', () => {
     const { container } = render(
       <Tooltip content="default tooltip">

@@ -1,0 +1,70 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Row, Col } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta title="Components/Col" component={Col} argTypes={HIDDEN_COMMON_PROPS} />
+
+# Col
+
+`Col` is a Bootstrap grid column, used inside a `Row` to lay out content responsively across up to 12 columns per breakpoint (`xs`, `sm`, `md`, `lg`, `xl`, `xxl`).
+
+export const Template = (args) => (
+  <Row>
+    <Col {...args}>1 of 2</Col>
+    <Col {...args}>2 of 2</Col>
+  </Row>
+);
+
+## API
+
+```jsx
+import { Row, Col } from '@sit-canvas/canvas-react/Col';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Explicit sizing
+
+Pass a column span (1–12) per breakpoint to size a `Col` explicitly, instead of relying on equal-width auto-layout.
+
+<Canvas>
+  <Story name="Explicit sizing">
+    <Row>
+      <Col xs={8}>xs=8</Col>
+      <Col xs={4}>xs=4</Col>
+    </Row>
+  </Story>
+</Canvas>
+
+## Responsive sizing
+
+Combine breakpoint props to change a `Col`'s width as the viewport grows.
+
+<Canvas>
+  <Story name="Responsive sizing">
+    <Row>
+      <Col xs={12} md={8}>
+        xs=12 md=8
+      </Col>
+      <Col xs={6} md={4}>
+        xs=6 md=4
+      </Col>
+    </Row>
+  </Story>
+</Canvas>
+
+## Offsetting columns
+
+Pass an object with `span`/`offset`/`order` to offset a `Col` instead of using an empty column to push it over.
+
+<Canvas>
+  <Story name="Offsetting columns">
+    <Row>
+      <Col md={{ span: 6, offset: 3 }}>md=6 offset=3</Col>
+    </Row>
+  </Story>
+</Canvas>

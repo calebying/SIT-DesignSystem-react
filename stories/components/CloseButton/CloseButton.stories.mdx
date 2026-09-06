@@ -1,0 +1,57 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { CloseButton } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/CloseButton"
+  component={CloseButton}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    variant: {
+      control: { type: 'select' },
+      options: [undefined, 'white'],
+    },
+  }}
+/>
+
+# Close Button
+
+`CloseButton` is a generic dismiss icon-button, used by components like `Alert`, `Modal`, and `Toast` for their built-in dismiss controls, and available standalone for custom dismissible UI.
+
+export const Template = (args) => <CloseButton {...args} />;
+
+## API
+
+```jsx
+import { CloseButton } from '@sit-canvas/canvas-react/CloseButton';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## White variant
+
+Set `variant="white"` for use on dark backgrounds.
+
+<Canvas>
+  <Story name="White variant">
+    <div className="p-3 bg-dark">
+      <CloseButton variant="white" />
+    </div>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled">
+    <CloseButton disabled />
+  </Story>
+</Canvas>
+
+## Accessibility
+
+`CloseButton` renders an `aria-label` of `"Close"` by default since it has no visible text — pass a more specific `aria-label` (e.g. `"Close alert"`) when the dismiss target isn't obvious from context alone.

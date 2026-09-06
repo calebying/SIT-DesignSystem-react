@@ -1,0 +1,72 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ButtonGroup, Button } from '../../../src/index';
+import { HIDDEN_COMMON_PROPS } from '../../helpers';
+
+<Meta
+  title="Components/ButtonGroup"
+  component={ButtonGroup}
+  argTypes={{
+    ...HIDDEN_COMMON_PROPS,
+    size: {
+      control: { type: 'select' },
+      options: [undefined, 'sm', 'lg'],
+    },
+  }}
+/>
+
+# Button Group
+
+`ButtonGroup` groups a series of `Button`s together on a single line, sharing rounded corners at the group's edges instead of each button.
+
+export const Template = (args) => (
+  <ButtonGroup {...args}>
+    <Button variant="secondary">Left</Button>
+    <Button variant="secondary">Middle</Button>
+    <Button variant="secondary">Right</Button>
+  </ButtonGroup>
+);
+
+## API
+
+```jsx
+import { ButtonGroup } from '@sit-canvas/canvas-react/ButtonGroup';
+```
+
+<Canvas>
+  <Story name="Basic">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Basic" />
+
+## Vertical
+
+Set `vertical` to stack the buttons vertically instead of horizontally.
+
+<Canvas>
+  <Story name="Vertical">
+    <ButtonGroup vertical>
+      <Button variant="secondary">Top</Button>
+      <Button variant="secondary">Middle</Button>
+      <Button variant="secondary">Bottom</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+## Sizing
+
+`size` applies to every `Button` in the group at once, so you don't need to size each individually.
+
+<Canvas>
+  <Story name="Sizing">
+    <div className="d-flex flex-column gap-2">
+      <ButtonGroup size="lg">
+        <Button variant="secondary">Large</Button>
+        <Button variant="secondary">Buttons</Button>
+      </ButtonGroup>
+      <ButtonGroup size="sm">
+        <Button variant="secondary">Small</Button>
+        <Button variant="secondary">Buttons</Button>
+      </ButtonGroup>
+    </div>
+  </Story>
+</Canvas>
